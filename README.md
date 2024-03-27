@@ -9,3 +9,6 @@
 
 ## DB초안
 <img width="1148" alt="KakaoTalk_20240324_165501094" src="https://github.com/Shw20/Capstone-Daelim24/assets/162408326/f7f23ca7-7e9d-4c98-a1b7-909d2b77b060">
+
+## DB파일
+[capstone.zip](https://github.com/Shw20/Capstone-Daelim24/files/14773139/capstone.zip)
