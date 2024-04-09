@@ -1,0 +1,168 @@
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* 제 모니터 2560 X 1440 사이즈 기준으로 사이즈 만들었습니다 */
+/* 작업 끝나면 남는시간에 @media 태그 사용해서 반응디자인 ㄱㄱ*/
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+*{
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    margin: 0 auto;
+    background-color: white;
+    color: black;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+header > .logo > a{
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-left: 20rem;
+}
+
+header > ul{
+    list-style-type: none;
+    margin-right: 20rem;
+}
+
+header > ul > li{
+    display: inline-block;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+header > ul > li > a{
+    color:black;
+    text-decoration: none;
+}
+
+/* main{
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 6rem;
+}
+
+.big-img > img{
+    padding: 0;
+    margin: 50px auto;
+    width: 100vw;
+    height: 500px;          
+} */
+
+/* 위에거 쓰는 대신 아래거 쓰는 조건으로 main 아래 모든 부모 요소에 
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    를 넣어줘야되는 단점    
+*/
+
+main{
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 6rem;
+}
+
+.big-img{
+    display: inline-block;
+    position: relative;
+}
+
+.btn{
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: #426B1F;
+    color: white;
+    border: none;
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    font-size:large;
+    font-weight: bold;
+    /* border-radius: 20px; */
+    cursor: pointer;
+}
+
+.big-img > img{
+    padding: 0;
+    margin: 50px auto;
+    width: 100vw;
+    height: 500px;
+}
+
+.items-short-wrap{
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    justify-content:space-between;
+    align-items: center;
+    grid-template-columns: repeat(3, 400px);
+    grid-auto-rows: 130px;
+    gap: 30px;
+}
+
+.items-short-wrap > a{
+    text-decoration: none;
+    color: black;
+}
+
+.items-short {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.items-short > img {
+    width: 400px;
+    height: 130px;
+}
+
+.items-ranking{
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.items-ranking-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.items-ranking-info{
+    margin-top: 50px;
+}
+
+.items-ranking-img > img{
+    width:300px;
+    height: 200px;
+}
+
+
+
+/* 반응형디자인은 할거 다 하고 시간 남으면
+/* @media screen and (max-width: px) {
+    
+} */
