@@ -598,7 +598,7 @@
     .signup .div-2 {
     position: absolute;
     height: 27px;
-    left: 50px;
+    left: 25px;
     font-family: "Noto Sans-Medium", Helvetica;
     font-weight: 400;
     color: transparent;
@@ -709,8 +709,11 @@
     position: absolute;
     width: 1922px;
     height: 146px;
+    margin-left: auto;
+    margin-right: auto;
     top: 0;
     left: 0;
+    right: 0;
     }
     .signup .overlap-11 {
     position: relative;
@@ -749,7 +752,7 @@
     height: 44px;
     top: 23px;
     left: 532px;
-    background-color: #f1f1f5;
+    /* background-color: #f1f1f5; */
     border-radius: 50px;
     }
     .signup .rectangle-3 {

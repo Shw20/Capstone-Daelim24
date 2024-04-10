@@ -17,7 +17,7 @@
                             <div class="text-wrapper-18" style="cursor: pointer;" onclick="location.href = '${pageContext.request.contextPath}/Main.jsp';">DDOSSEOJYO</div>
                             <div class="search-container">
 							    <div class="rectangle-2">
-							        <input type="search" name="keyword" id="search" placeholder="Search" />
+							        <input type="search" placeholder="Search" />
 							        <span class="icon"><i class="fa fa-search"></i></span>
 							    </div>
 							</div>
@@ -30,6 +30,7 @@
                                 <div class="text-wrapper-19">카테고리</div>
                                 <div class="frame">
                                     <div class="text-wrapper-20" style="cursor: pointer;" onclick="location.href = '${pageContext.request.contextPath}/Login.jsp';">로그인</div>
+                                    <div class="text-wrapper-20" style="cursor: pointer;" onclick="location.href = '${pageContext.request.contextPath}/Signup.jsp';">회원가입</div>
                                 </div>
                                 <div class="frame-2">
                                     <div class="text-wrapper-21">브랜드관</div>

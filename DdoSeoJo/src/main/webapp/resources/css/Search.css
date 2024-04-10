@@ -1,19 +1,12 @@
 @charset "UTF-8";
 
-.container-2{
-  width: 300px;
-  vertical-align: middle;
-  white-space: nowrap;
-  position: relative;
-}
-.container-2 input#search{
-  width: 50px;
+.rectangle-2 input#search{
+  width: 30px;
   height: 50px;
-  background: white;
   border: none;
   font-size: 13pt;
   float: left;
-  color: #262626;
+  background-color: #f1f1f5; 
   padding-left: 45px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -24,40 +17,44 @@
   -ms-transition: width .55s ease;
   -o-transition: width .55s ease;
   transition: width .55s ease;
+  border-radius: 50px;
 }
-.container-2 .icon{
+.rectangle-2 .icon{
   position: absolute;
-  top: -8%;
+  top: 14%;
   margin-left: 17px;
   margin-top: 17px;
   z-index: 1;
   color: #4f5b66;
 }
-/* .container-2 input#search::-webkit-input-placeholder {
+.rectangle-2 input#search::-webkit-input-placeholder {
    color: #65737e;
 }
-.container-2 input#search:-moz-placeholder { Firefox 18-
+.rectangle-2 input#search:-moz-placeholder { /* Firefox 18- */
    color: #65737e;  
 }
-.container-2 input#search::-moz-placeholder {  Firefox 19+
+.rectangle-2 input#search::-moz-placeholder {  /* Firefox 19+ */
    color: #65737e;  
 }
-.container-2 input#search:-ms-input-placeholder {  
+.rectangle-2 input#search:-ms-input-placeholder {  
    color: #65737e;  
 }
-.container-2 input#search:focus, .container-2 input#search:active{
+.rectangle-2 input#search:focus, .rectangle-2 input#search:active {
   outline:none;
-  width: 500px;
-} */
-.container-2:hover input#search{
-width: 500px;
+  width: 450px;
+  border-radius: 50px;
 }
-.container-2:hover .icon{
-  color: #93a2ad;
+.rectangle-2:hover input#search{
+	width: 450px;
+	border-radius: 50px;
+}
+.rectangle-2:hover .icon{
+  color: #f1f1f5;
 }
 .rectangle-2 {
    position: relative;
    display: inline-block;
+   
 }
 
 #search {
@@ -67,9 +64,9 @@ width: 500px;
 .icon {
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 28px;
     transform: translateY(-50%);
-    pointer-events: none; /* 아이콘에 대한 이벤트를 비활성화하여 input과 겹치는 것을 방지 */
+        pointer-events: none; /* 아이콘에 대한 이벤트를 비활성화하여 input과 겹치는 것을 방지 */
 }
 .search-container {
     margin-top: 20px; /* 검색창을 조금 아래로 내리기 위한 여백 설정 */

@@ -11,9 +11,9 @@
 <form name="Join" action="JoinServlet" method="post" onsubmit="return JoinForm()"> 
     <div class="signup">
         <div class="div">
-        <nav>
-			<%@ include file="resources/layout/nav.jsp"%>
-		</nav>
+	        <nav>
+				<%@ include file="resources/layout/nav.jsp"%>
+			</nav>
             <div class="overlap">
                 <div class="overlap-2">
                     <!-- <div class="rectangle"></div> -->
@@ -21,7 +21,7 @@
                     <div class="text-wrapper-10"><input type="text" id="userID" name="userID" placeholder="아이디" autocomplete="off" class="input-id" required ></div>
                     <div class="div-wrapper">
                         <div class="text-wrapper-11">
-                        	<button type="button" onclick="fn_dbCheckId()" name="dbCheckId" class="checkId">중목 확인</button>
+                        	<button type="button" onclick="fn_dbCheckId()" name="dbCheckId" class="checkId">중복 확인</button>
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                 <div class="overlap-4">
                     <p class="div-2">
                         <span class="text-wrapper-13">이미 회원이신가요?</span>
-                        <span class="text-wrapper-14">로그인하러 가기</span>
+                        <span class="text-wrapper-14" style="background-color:transparent; cursor: pointer;" onclick="location.href = '${pageContext.request.contextPath}/Signup.jsp';">로그인 하러가기</span>
                     </p>
                 </div>
                 <div class="overlap-5">
