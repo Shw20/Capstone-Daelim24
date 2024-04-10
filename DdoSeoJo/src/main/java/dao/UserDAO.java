@@ -27,9 +27,9 @@ public class UserDAO {
             return;
         }
     	
-        String query = "INSERT INTO `user` (UserID, Pwd, Age, PH, Email, Name) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO `user` (UserID, Pwd, Age, PH, Email, Name) VALUES (?, ?, ?, ?, ?, ?)";
         try {
-            PreparedStatement pstmt = conn.prepareStatement(query);
+            PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, user.getUserID());
             pstmt.setString(2, user.getPassword());
             pstmt.setInt(3, user.getAge());
@@ -38,6 +38,7 @@ public class UserDAO {
             pstmt.setString(6, user.getName());
             pstmt.executeUpdate();
             pstmt.close();
+            System.out.println("회원가입 성공");
             
         } catch (SQLException e) {
             e.printStackTrace();

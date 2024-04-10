@@ -1,0 +1,962 @@
+    .signup {
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    }
+    .signup .div {
+    overflow-x: hidden;
+    width: 1920px;
+    height: 2141px;
+    position: relative;
+    }
+    .signup .div-footer {
+    position: absolute;
+    width: 1280px;
+    height: 543px;
+    top: 1200px;
+    left: 318px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #ebebeb;
+    }
+    .signup .div-service-area {
+    position: absolute;
+    width: 1200px;
+    height: 204px;
+    top: 51px;
+    left: 40px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: #ebebeb;
+    }
+    .signup .div-footer-menu {
+    position: absolute;
+    width: 400px;
+    height: 147px;
+    top: 0;
+    left: 0;
+    }
+    .signup .div-menu-box {
+    left: 0;
+    position: absolute;
+    width: 160px;
+    height: 147px;
+    top: 0;
+    }
+    .signup .strong {
+    position: absolute;
+    width: 55px;
+    height: 19px;
+    top: -1px;
+    left: 0;
+    font-family: "Segoe UI-Bold", Helvetica;
+    font-weight: 700;
+    color: #222222;
+    font-size: 13px;
+    letter-spacing: -0.16px;
+    line-height: normal;
+    }
+    .signup .list-item-link {
+    width: 48px;
+    height: 13px;
+    top: 36px;
+    left: 0;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    white-space: nowrap;
+    position: absolute;
+    font-size: 13.1px;
+    letter-spacing: -0.21px;
+    line-height: normal;
+    }
+    .signup .text-wrapper {
+    width: 48px;
+    height: 13px;
+    top: 67px;
+    left: 0;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    white-space: nowrap;
+    position: absolute;
+    font-size: 13.1px;
+    letter-spacing: -0.21px;
+    line-height: normal;
+    }
+    .signup .list-item-link-2 {
+    position: absolute;
+    width: 63px;
+    height: 13px;
+    top: 98px;
+    left: 0;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    font-size: 13.1px;
+    letter-spacing: -0.21px;
+    line-height: normal;
+    white-space: nowrap;
+    }
+    .signup .list-item-link-3 {
+    width: 111px;
+    height: 16px;
+    top: 129px;
+    left: 0;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    position: absolute;
+    font-size: 13.1px;
+    letter-spacing: -0.21px;
+    line-height: normal;
+    }
+    .signup .list-item-link-4 {
+    width: 111px;
+    height: 16px;
+    top: 159px;
+    left: 0;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    position: absolute;
+    font-size: 13.1px;
+    letter-spacing: -0.21px;
+    line-height: normal;
+    }
+    .signup .list-item-link-5 {
+    width: 111px;
+    height: 16px;
+    top: 189px;
+    left: 0;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    position: absolute;
+    font-size: 13.1px;
+    letter-spacing: -0.21px;
+    line-height: normal;
+    }
+    .signup .div-menu-box-2 {
+    left: 240px;
+    position: absolute;
+    width: 160px;
+    height: 147px;
+    top: 0;
+    }
+    .signup .list-item-link-6 {
+    width: 412px;
+    height: 13px;
+    top: 36px;
+    left: 0;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    white-space: nowrap;
+    position: absolute;
+    font-size: 13.1px;
+    letter-spacing: -0.21px;
+    line-height: normal;
+    }
+    .signup .list-item-link-7 {
+    width: 63px;
+    height: 13px;
+    top: 67px;
+    left: 0;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    white-space: nowrap;
+    position: absolute;
+    font-size: 13.1px;
+    letter-spacing: -0.21px;
+    line-height: normal;
+    }
+    .signup .list-item-link-8 {
+    width: 87px;
+    height: 16px;
+    top: 129px;
+    left: 0;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    position: absolute;
+    font-size: 13.1px;
+    letter-spacing: -0.21px;
+    line-height: normal;
+    }
+    .signup .list-item-link-9 {
+    width: 87px;
+    height: 16px;
+    top: 159px;
+    left: 0;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    position: absolute;
+    font-size: 13.1px;
+    letter-spacing: -0.21px;
+    line-height: normal;
+    }
+    .signup .list-item-link-10 {
+    width: 87px;
+    height: 16px;
+    top: 189px;
+    left: 0;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    position: absolute;
+    font-size: 13.1px;
+    letter-spacing: -0.21px;
+    line-height: normal;
+    }
+    .signup .div-customer-service {
+    position: absolute;
+    width: 267px;
+    height: 147px;
+    top: 0;
+    left: 933px;
+    }
+    .signup .strong-link {
+    position: absolute;
+    width: 82px;
+    height: 19px;
+    top: -1px;
+    left: 59px;
+    font-family: "Segoe UI-Bold", Helvetica;
+    font-weight: 700;
+    color: #222222;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    }
+    .signup .descriptions-term {
+    position: absolute;
+    width: 263px;
+    height: 40px;
+    top: 27px;
+    left: 0;
+    }
+    .signup .element {
+    position: absolute;
+    width: 253px;
+    height: 40px;
+    top: -2px;
+    left: 0;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    font-size: 12.7px;
+    letter-spacing: -0.07px;
+    line-height: 20px;
+    }
+    .signup .link {
+    position: absolute;
+    width: 110px;
+    height: 34px;
+    top: 120px;
+    left: 0;
+    background-color: #222222;
+    }
+    .signup .text-wrapper-2 {
+    position: absolute;
+    width: 80px;
+    height: 14px;
+    top: 9px;
+    left: 14px;
+    font-family: "Segoe UI-Bold", Helvetica;
+    font-weight: 700;
+    color: #fafafa;
+    font-size: 12px;
+    text-align: center;
+    line-height: normal;
+    }
+    .signup .text-wrapper-3 {
+    position: absolute;
+    width: 129px;
+    height: 14px;
+    top: 398px;
+    left: 40px;
+    font-family: "Segoe UI-Bold" Helvetica;
+    font-weight: 700;
+    color: #222222;
+    font-size: 11.1px;
+    letter-spacing: -0.06px;
+    line-height: normal;
+    }
+    .signup .p {
+    position: absolute;
+    width: 523px;
+    height: 14px;
+    top: 426px;
+    left: 40px;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    font-size: 11.2px;
+    letter-spacing: -0.06px;
+    line-height: normal;
+    }
+    .signup .link-2 {
+    position: absolute;
+    width: 99px;
+    height: 14px;
+    top: 418px;
+    left: 577px;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    font-size: 11.2px;
+    letter-spacing: -0.06px;
+    line-height: normal;
+    text-decoration: underline;
+    }
+    .signup .p-notice {
+    position: absolute;
+    width: 605px;
+    height: 42px;
+    top: 451px;
+    left: 40px;
+    }
+    .signup .text-wrapper-4 {
+    position: absolute;
+    width: 605px;
+    height: 14px;
+    top: 29px;
+    left: 0;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    font-size: 11.2px;
+    letter-spacing: -0.06px;
+    line-height: normal;
+    }
+    .signup .text-wrapper-5 {
+    position: absolute;
+    width: 85px;
+    height: 14px;
+    top: 478px;
+    left: 1155px;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #2222224c;
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+    }
+    .signup .list-item-link-11 {
+    width: 48px;
+    height: 16px;
+    top: 286px;
+    left: 40px;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    position: absolute;
+    font-size: 12px;
+    letter-spacing: -0.21px;
+    line-height: normal;
+    }
+    .signup .list-item-link-12 {
+    width: 48px;
+    height: 16px;
+    top: 286px;
+    left: 108px;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    position: absolute;
+    font-size: 12px;
+    letter-spacing: -0.21px;
+    line-height: normal;
+    }
+    .signup .list-item-link-13 {
+    width: 48px;
+    height: 16px;
+    top: 286px;
+    left: 175px;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    position: absolute;
+    font-size: 12px;
+    letter-spacing: -0.21px;
+    line-height: normal;
+    }
+    .signup .list-item-link-14 {
+    width: 48px;
+    height: 16px;
+    top: 286px;
+    left: 243px;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    position: absolute;
+    font-size: 12px;
+    letter-spacing: -0.21px;
+    line-height: normal;
+    }
+    .signup .list-item-link-15 {
+    width: 95px;
+    height: 16px;
+    top: 286px;
+    left: 310px;
+    font-family: "Segoe UI-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    position: absolute;
+    font-size: 12px;
+    letter-spacing: -0.21px;
+    line-height: normal;
+    }
+    .signup .descriptions-term-2 {
+    position: absolute;
+    width: 653px;
+    height: 40px;
+    top: 319px;
+    left: 40px;
+    }
+    .signup .overlap-group {
+    position: absolute;
+    width: 426px;
+    height: 40px;
+    top: -1px;
+    left: 0;
+    }
+    .signup .text-wrapper-6 {
+    position: absolute;
+    width: 156px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    font-size: 12.2px;
+    letter-spacing: -0.07px;
+    line-height: 20px;
+    white-space: nowrap;
+    }
+    .signup .element-2 {
+    position: absolute;
+    width: 270px;
+    height: 20px;
+    top: 0;
+    left: 156px;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    font-size: 12.6px;
+    letter-spacing: -0.07px;
+    line-height: 20px;
+    white-space: nowrap;
+    }
+    .signup .span {
+    letter-spacing: -0.01px;
+    }
+    .signup .text-wrapper-7 {
+    letter-spacing: -0.01px;
+    text-decoration: underline;
+    }
+    .signup .text-wrapper-8 {
+    position: absolute;
+    width: 380px;
+    height: 20px;
+    top: 20px;
+    left: 0;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    font-size: 12.2px;
+    letter-spacing: -0.07px;
+    line-height: 20px;
+    white-space: nowrap;
+    }
+    .signup .text-wrapper-9 {
+    position: absolute;
+    width: 310px;
+    height: 20px;
+    top: -1px;
+    left: 440px;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #22222280;
+    font-size: 12.8px;
+    letter-spacing: -0.07px;
+    line-height: 20px;
+    white-space: nowrap;
+    }
+    .signup .overlap {
+    position: absolute;
+    width: 520px;
+    height: 978px;
+    top: 200px;
+    left: 698px;
+    background-color: #ffffff;
+    }
+    .signup .overlap-2 {
+    position: absolute;
+    width: 400px;
+    height: 56px;
+    top: 60px;
+    left: 60px;
+    background-color: #ffffff;
+    }
+    .signup .rectangle {
+    position: absolute;
+    width: 400px;
+    height: 1px;
+    top: 55px;
+    left: 0;
+    background-color: #c3c3c3;
+    }
+    .signup .text-wrapper-10 {
+    position: absolute;
+    height: 22px;
+    top: 16px;
+    left: 0;
+    font-family: "Noto Sans-Regular", Helvetica;
+    font-weight: 400;
+    color: #767676;
+    font-size: 16px;
+    letter-spacing: -0.07px;
+    line-height: normal;
+    }
+    .signup input{
+    border: none;
+    border-bottom: 1px solid #ebebeb;
+    font-size: 15px;
+    letter-spacing: -.15px;
+    line-height: 22px;
+    padding: 8px 0;
+    width: 100%;
+    }
+    .signup .div-wrapper {
+    position: absolute;
+    width: 73px;
+    height: 28px;
+    top: 14px;
+    left: 323px;
+    background-color: #f5f5f5;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-color: #0000004c;
+    }
+    .signup .text-wrapper-11 {
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    font-family: "Newsreader-Medium", Helvetica;
+    font-weight: 500;
+    color: #5c5c5c;
+    font-size: 13px;
+    letter-spacing: 0.91px;
+    line-height: 13px;
+    white-space: nowrap;
+    }
+    .signup .overlap-3 {
+    position: absolute;
+    width: 400px;
+    height: 56px;
+    top: 710px;
+    left: 60px;
+    background-color: #742121;
+    cursor: pointer;
+    }
+    .signup .text-wrapper-12 {
+    position: absolute;
+    width: 100px;
+    height: 27px;
+    top: 14px;
+    left: 150px;
+    font-family: "Noto Sans-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: -0.07px;
+    line-height: normal;
+    }
+    .signup .overlap-4 {
+    position: absolute;
+    width: 400px;
+    height: 56px;
+    top: 815px;
+    left: 60px;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #dbdbdb;
+    }
+
+    .signup .div-2 {
+    position: absolute;
+    height: 27px;
+    left: 50px;
+    font-family: "Noto Sans-Medium", Helvetica;
+    font-weight: 400;
+    color: transparent;
+    font-size: 20px;
+    text-align: center;
+    line-height: normal;
+    }
+    .signup .text-wrapper-13 {
+    font-weight: 500;
+    color: #8f8f8f;
+    letter-spacing: -0.01px;
+    }
+    .signup .text-wrapper-14 {
+    font-family: "Noto Sans-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #5d3d3d;
+    letter-spacing: -0.01px;
+    }
+    .signup .overlap-5 {
+    position: absolute;
+    width: 400px;
+    height: 56px;
+    top: 150px;
+    left: 60px;
+    background-color: #ffffff;
+    }
+    .signup .overlap-6 {
+    position: absolute;
+    width: 400px;
+    height: 56px;
+    top: 240px;
+    left: 60px;
+    background-color: #ffffff;
+    }
+    .signup .overlap-7 {
+    position: absolute;
+    width: 400px;
+    height: 56px;
+    top: 330px;
+    left: 60px;
+    background-color: #ffffff;
+    }
+    .signup .overlap-8 {
+    position: absolute;
+    width: 400px;
+    height: 56px;
+    top: 420px;
+    left: 60px;
+    background-color: #ffffff;
+    }
+    .signup .text-wrapper-15 {
+    position: absolute;
+    height: 15px;
+    top: 687px;
+    left: 341px;
+    font-family: "Noto Sans-Regular", Helvetica;
+    font-weight: 400;
+    color: #767676;
+    font-size: 11px;
+    letter-spacing: -0.07px;
+    line-height: normal;
+    }
+    .signup .overlap-9 {
+    position: absolute;
+    width: 400px;
+    height: 56px;
+    top: 510px;
+    left: 60px;
+    background-color: #ffffff;
+    }
+    .signup .overlap-10 {
+    position: absolute;
+    width: 400px;
+    height: 56px;
+    top: 600px;
+    left: 60px;
+    background-color: #ffffff;
+    }
+    .signup .text-wrapper-16 {
+    position: absolute;
+    height: 22px;
+    top: 901px;
+    left: 175px;
+    font-family: "Noto Sans-Medium", Helvetica;
+    font-weight: 500;
+    color: #797979;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: -0.07px;
+    line-height: normal;
+    text-decoration: underline;
+    }
+    .signup .text-wrapper-17 {
+    position: absolute;
+    width: 117px;
+    height: 38px;
+    top: 200px;
+    left: 902px;
+    font-family: "Noto Sans-Medium", Helvetica;
+    font-weight: 500;
+    color: #000000;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: -0.07px;
+    line-height: normal;
+    }
+    .signup .group {
+    position: absolute;
+    width: 1922px;
+    height: 146px;
+    top: 0;
+    left: 0;
+    }
+    .signup .overlap-11 {
+    position: relative;
+    width: 1924px;
+    height: 146px;
+    }
+    .signup .group-2 {
+    position: absolute;
+    width: 1924px;
+    height: 146px;
+    top: 0;
+    left: 0;
+    }
+    .signup .overlap-12 {
+    position: absolute;
+    width: 1920px;
+    height: 90px;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    }
+    .signup .text-wrapper-18 {
+    position: absolute;
+    top: 34px;
+    left: 320px;
+    font-family: "Inter-Bold", Helvetica;
+    font-weight: 700;
+    color: #000000;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    }
+    .signup .rectangle-2 {
+    position: absolute;
+    width: 460px;
+    height: 44px;
+    top: 23px;
+    left: 532px;
+    background-color: #f1f1f5;
+    border-radius: 50px;
+    }
+    .signup .rectangle-3 {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: 30px;
+    left: 1556px;
+    background-color: #ffffff;
+    border: 1px solid;
+    }
+    .signup .rectangle-4 {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: 30px;
+    left: 1500px;
+    background-color: #ffffff;
+    border: 1px solid;
+    }
+    .signup .rectangle-5 {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    top: 30px;
+    left: 1446px;
+    background-color: #ffffff;
+    border: 1px solid;
+    }
+    .signup .group-wrapper {
+    position: absolute;
+    width: 1920px;
+    height: 56px;
+    top: 90px;
+    left: 2px;
+    background-color: #742121;
+    }
+    .signup .group-3 {
+    position: relative;
+    width: 1236px;
+    height: 21px;
+    top: 17px;
+    left: 364px;
+    }
+    .signup .text-wrapper-19 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: "Noto Sans-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: -0.75px;
+    line-height: normal;
+    }
+    .signup .frame {
+    display: inline-flex;
+    gap: 30px;
+    left: 1111px;
+    align-items: flex-start;
+    position: absolute;
+    top: 1px;
+    }
+    .signup .text-wrapper-20 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Noto Sans-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: -0.75px;
+    line-height: normal;
+    }
+    .signup .frame-2 {
+    display: flex;
+    width: 257px;
+    gap: 24px;
+    left: 166px;
+    align-items: flex-start;
+    position: absolute;
+    top: 1px;
+    }
+    .signup .text-wrapper-21 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: "Noto Sans-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 15px;
+    letter-spacing: -0.75px;
+    line-height: normal;
+    }
+    .signup .item-link {
+    position: absolute;
+    width: 73px;
+    height: 44px;
+    top: 23px;
+    left: 1011px;
+    }
+    .signup .span-tab-name {
+    position: relative;
+    height: 21px;
+    top: 15px;
+    background-color: #ffffff;
+    }
+    .signup .text-wrapper-22 {
+    position: absolute;
+    width: 73px;
+    height: 20px;
+    top: -2px;
+    left: 0;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #65aa00;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: 20px;
+    white-space: nowrap;
+    }
+    .signup .span-tab-name-wrapper {
+    left: 1106px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-color: #222222;
+    position: absolute;
+    width: 28px;
+    height: 44px;
+    top: 23px;
+    }
+    .signup .text-wrapper-23 {
+    position: absolute;
+    width: 28px;
+    height: 20px;
+    top: -2px;
+    left: 0;
+    font-family: "Segoe UI-Bold", Helvetica;
+    font-weight: 700;
+    color: #222222;
+    font-size: 15.1px;
+    letter-spacing: 0;
+    line-height: 20px;
+    white-space: nowrap;
+    }
+    .signup .item-link-2 {
+    left: 1154px;
+    position: absolute;
+    width: 28px;
+    height: 44px;
+    top: 23px;
+    }
+    .signup .text-wrapper-24 {
+    position: absolute;
+    width: 28px;
+    height: 20px;
+    top: -2px;
+    left: 0;
+    font-family: "Segoe UI-Regular", Helvetica;
+    font-weight: 400;
+    color: #222222;
+    font-size: 15.1px;
+    letter-spacing: 0;
+    line-height: 20px;
+    white-space: nowrap;
+    }
+    .signup .after {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 0;
+    left: 30px;
+    background-color: #ef6253;
+    border-radius: 5px;
+    }
+    .signup .item-link-3 {
+    left: 1210px;
+    position: absolute;
+    width: 28px;
+    height: 44px;
+    top: 23px;
+    }
+    .signup .vector {
+    position: absolute;
+    width: 30px;
+    height: 36px;
+    top: 36px;
+    left: 947px;
+    }
+    .signup .icon-menu {
+    position: absolute;
+    width: 32px;
+    height: 28px;
+    top: 39px;
+    left: 1562px;
+    }
+    .signup .icon-heart {
+    position: absolute;
+    width: 37px;
+    height: 34px;
+    top: 36px;
+    left: 1450px;
+    }
+    .signup .icon-profile-circled {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 35px;
+    left: 1505px;
+    }

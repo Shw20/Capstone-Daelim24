@@ -7,18 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DdoSseoJo</title>
     <link rel="stylesheet" href="resources/css/style.css">
+    <link rel="stylesheet" href="resources/css/SignStyle.css">
 </head>
 <body>
     <!-- @@@@@@@@@@@@@@@@@@ 헤더 @@@@@@@@@@@@@@@@@@ -->
     <header>
-        <div class="logo"><a href="">DdoSseoJo</a></div>
-        <ul class="menu">
-            <li><a href="">브랜드관</a></li>
-            <li><a href="">제품</a></li>
-            <li><a href="">🔥핫딜🔥</a></li>
-            <li><a href="">부품구매</a></li>
-            <li><a href="Login.jsp">로그인</a></li>
-        </ul>
+        <%
+		    request.setCharacterEncoding("UTF8");
+		    response.setCharacterEncoding("UTF-8");
+		    
+		    Integer IDX = (Integer) session.getAttribute("IDX");
+		    String UserID = (String) session.getAttribute("UserID");
+		    String Name = (String) session.getAttribute("Name");
+		
+		    
+		
+		        if (Name == null) {	%>
+		    		<jsp:include page="resources/layout/nav.jsp"></jsp:include>
+		<%
+		        }
+		        if (Name != null) {
+		%>
+		    <%
+		        	if (Name.equals("관리자")) {
+		    %>
+		            	<jsp:include page="resources/layout/adminNav.jsp"></jsp:include>
+		    <%
+		        	} else {
+		    %>
+		            <jsp:include page="resources/layout/userNav.jsp"></jsp:include>
+		    <%
+		        	}
+		    	}
+		%>
     </header>
     <!-- @@@@@@@@@@@@@@@@@@ 헤더끝 @@@@@@@@@@@@@@@@@@ -->
 

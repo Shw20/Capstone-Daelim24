@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/* 공통 스타일 */
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 네비게이션 바 스타일 */
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+
+        /* 네비게이션 바 내부 요소 스타일 */
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-size: 24px;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-link {
+            margin-left: 10px;
+        }
+
+        /* 미디어 쿼리를 사용한 반응형 스타일 */
+        @media only screen and (max-width: 768px) {
+            .nav-links {
+                display: none; /* 작은 화면에서는 링크 숨기기 */
+            }
+
+            .nav-brand {
+                font-size: 20px;
+            }
+
+            .nav-toggle {
+                display: block; /* 햄버거 아이콘 표시 */
+            }
+        }
