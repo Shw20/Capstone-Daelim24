@@ -20,18 +20,19 @@
                     <!-- <div class="text-wrapper-10">아이디를 입력해주세요</div> -->
                     <div class="text-wrapper-10"><input type="text" id="userID" name="userID" placeholder="아이디" autocomplete="off" class="input-id" required ></div>
                     <div class="div-wrapper">
-                        <div class="text-wrapper-11">중복확인</div>
+                        <div class="text-wrapper-11">
+                        	<button type="button" onclick="fn_dbCheckId()" name="dbCheckId" class="checkId">중목 확인</button>
+                        </div>
                     </div>
                 </div>
                 <div class="overlap-3" style="position: relative; display: inline-block;">
 				    <div class="text-wrapper-12" style="background-color:transparent; cursor: pointer;">회원가입</div>
 				    <input type="submit" value="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;">
 				</div>
-
                 <div class="overlap-4">
                     <p class="div-2">
                         <span class="text-wrapper-13">이미 회원이신가요?</span>
-                        <span class="text-wrapper-14">로그인하러 가기</span> &nbsp;
+                        <span class="text-wrapper-14">로그인하러 가기</span>
                     </p>
                 </div>
                 <div class="overlap-5">

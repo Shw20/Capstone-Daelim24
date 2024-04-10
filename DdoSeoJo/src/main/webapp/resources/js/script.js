@@ -6,7 +6,10 @@ function JoinForm(){ /* 회원가입 유효성검사 */
             alert("아이디를 입력하세요.");
             form.userID.focus();
             return false;
-        }
+        } else if(form.userID.idDuplication.value!="idCheck"){
+			alert('아이디 중복체크를 해주세요.');
+			return false;
+		}
 		if(form.password.value == ""){
             alert("비밀번호를 입력하세요.");
             form.password.focus();
@@ -49,6 +52,17 @@ function JoinForm(){ /* 회원가입 유효성검사 */
 		   .replace(/[^0-9]/g, '')
 		  .replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3").replace(/(\-{1,2})$/g, "");
 	}
+	
+	/*function fn_dbCheckId(){ //중복체크
+		var form = document.forms["Join"];
+		var id = form.userID.value;
+		if(id.length == 0 || id == ""){
+			alert("아이디를 입력해주세요.");
+			form.id.focus();
+		}else {
+			window.open("${contextPath}")
+		}
+	}*/
 	
 	function checkPasswordMatch() { //비밀번호가 일치한지
         var password = document.getElementById("password").value;
