@@ -40,10 +40,11 @@
             </div>
             <div class="text-wrapper-17" style="cursor: pointer;">로그인</div>
 </form>  <!-- 회원가입 버튼 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
-			<footer>
-				<%@ include file="resources/layout/footer.jsp"%>
-			</footer>
+			
         </div>
     </div>
 </body>
+<footer>
+	<%@ include file="resources/layout/footer.jsp"%>
+</footer>
 </html>

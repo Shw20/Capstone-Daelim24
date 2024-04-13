@@ -12,15 +12,16 @@
     position: relative;
     }
     .signup .div-footer {
-    position: absolute;
+    position: fixed; /* 화면을 기준으로 고정된 위치에 배치합니다. */
     width: 1280px;
     height: 543px;
-    top: 1200px;
-    left: 318px;
+    top: 50%; /* 화면 세로 중앙에 배치하기 위해 50% 지정 */
+    left: 50%; /* 화면 가로 중앙에 배치하기 위해 50% 지정 */
+    transform: translate(-50%, -50%); /* 요소의 중심을 화면의 가운데로 이동 */
     border-top-width: 1px;
     border-top-style: solid;
     border-color: #ebebeb;
-    }
+}
     .signup .div-service-area {
     position: absolute;
     width: 1200px;

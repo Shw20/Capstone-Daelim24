@@ -11,7 +11,7 @@
     height: 2141px;
     position: relative;
     }
-    .signup .div-footer {
+    /* .signup .div-footer {
     position: absolute;
     width: 1280px;
     height: 543px;
@@ -20,7 +20,19 @@
     border-top-width: 1px;
     border-top-style: solid;
     border-color: #ebebeb;
-    }
+    } */
+    .signup .div-footer {
+    position: absolute;
+    width: 1280px;
+    height: 543px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #ebebeb;
+    z-index: 1000;
+}
+    
     .signup .div-service-area {
     position: absolute;
     width: 1200px;
@@ -533,7 +545,7 @@
     font-size: 15px;
     letter-spacing: -.15px;
     line-height: 22px;
-    padding: 8px 0;
+    padding: 11px 0;
     width: 100%;
     }
     .signup .div-wrapper {

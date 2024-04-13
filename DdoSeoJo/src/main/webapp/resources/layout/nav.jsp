@@ -33,10 +33,10 @@
                                     <div class="text-wrapper-20" style="cursor: pointer;" onclick="location.href = '${pageContext.request.contextPath}/Signup.jsp';">회원가입</div>
                                 </div>
                                 <div class="frame-2">
-                                    <div class="text-wrapper-21">브랜드관</div>
-                                    <div class="text-wrapper-21">제품</div>
-                                    <div class="text-wrapper-21">핫딜</div>
-                                    <div class="text-wrapper-21">부품구매?</div>
+                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">브랜드관</div>
+                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">제품</div>
+                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">핫딜</div>
+                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">부품구매?</div>
                                 </div>
                             </div>
                         </div>
@@ -44,23 +44,23 @@
                 </div>
                 <div class="item-link">
                     <div class="span-tab-name">
-                        <div class="text-wrapper-22">파며드는 봄</div>
+                        <div class="text-wrapper-22" style="cursor: pointer;" onclick="location.href = '';">파며드는 봄</div>
                     </div>
                 </div>
                 <div class="span-tab-name-wrapper">
                     <div class="span-tab-name">
-                        <div class="text-wrapper-23">추천</div>
+                        <div class="text-wrapper-23" style="cursor: pointer;" onclick="location.href = '';">추천</div>
                     </div>
                 </div>
                 <div class="item-link-2">
                     <div class="span-tab-name">
-                        <div class="text-wrapper-24">랭킹</div>
+                        <div class="text-wrapper-24" style="cursor: pointer;" onclick="location.href = '';">랭킹</div>
                         <div class="after"></div>
                     </div>
                 </div>
                 <div class="item-link-3">
                     <div class="span-tab-name">
-                        <div class="text-wrapper-24">발견</div>
+                        <div class="text-wrapper-24" style="cursor: pointer;" onclick="location.href = '';">발견</div>
                     </div>
                 </div>
             </div>

@@ -71,11 +71,13 @@ header > ul > li > a{
     를 넣어줘야되는 단점    
 */
 
-main{
+main {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 6rem;
+    margin-bottom: 543px; /* footer의 높이와 동일하게 설정 */
+    position: relative; /* main 요소를 relative로 설정하여 footer가 main 내부에 들어갈 수 있도록 함 */
 }
 
 .big-img{
