@@ -24,7 +24,7 @@
                 Class.forName("com.mysql.jdbc.Driver");
                 conn = DriverManager.getConnection(url, username, password);
                 
-                // 선택된 카테고리 가져오기
+                // 선택된 카테고리 저ㅇ보 가져오기
                 String selectedTypeCI = request.getParameter("selectedTypeCI");
                 String selectedOption = request.getParameter("selectedOption");
                 String selectedBrand = request.getParameter("selectedBrand");
@@ -45,7 +45,7 @@
                     stmt.setString(3, selectedBrand);
                 }
                 
-                // SQL 문 실행
+                // 쿼리문 실행
                 rs = stmt.executeQuery();
                 
                 // 결과 출력
@@ -61,7 +61,6 @@
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {
-                // 연결 및 자원 해제
                 if (rs != null) {
                     try {
                         rs.close();

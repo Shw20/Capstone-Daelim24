@@ -16,12 +16,7 @@
     let selectedTypeCI;
     let selectedOption;
     let selectedBrand;
-
-//    resetBtn.addEventListener('click', function(event){
-//      category2.classList.add('hidden');
-//      category3.classList.add('hidden');
-//      category4.classList.add('hidden');
-//    });
+    
 
 	resetBtn.addEventListener('click', function(event){
 	

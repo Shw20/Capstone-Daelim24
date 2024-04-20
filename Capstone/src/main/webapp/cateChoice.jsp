@@ -95,6 +95,7 @@
     </div>
   </section>
   
+<!--  choiceScript.js로 분리 -->
   <script src="./resources/js/cateScript.js"></script>
 
 </body>
