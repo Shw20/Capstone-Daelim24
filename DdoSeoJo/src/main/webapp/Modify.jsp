@@ -35,8 +35,6 @@
                 session.setAttribute("IDX", rs.getInt("IDX"));
 	            session.setAttribute("UserID", rs.getString("UserID"));
 	            session.setAttribute("Name", rs.getString("Name"));
-	            session.setAttribute("Email", rs.getString("Email"));
-
 	            
                 // 메인 페이지에 세션부여
                 			//test.jsp 이건 제가 테스트 할라고 만든 파일이고 이건 나중에 수정하면 됨

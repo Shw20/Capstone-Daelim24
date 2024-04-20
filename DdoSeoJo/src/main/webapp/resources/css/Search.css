@@ -58,7 +58,7 @@
 }
 
 #search {
-   padding-right: 30px; /* 아이콘을 위한 여백 추가 */
+   padding-right: 30px;
 }
 
 .icon {
@@ -66,8 +66,8 @@
     top: 50%;
     right: 28px;
     transform: translateY(-50%);
-        pointer-events: none; /* 아이콘에 대한 이벤트를 비활성화하여 input과 겹치는 것을 방지 */
+        pointer-events: none; 
 }
 .search-container {
-    margin-top: 20px; /* 검색창을 조금 아래로 내리기 위한 여백 설정 */
+    margin-top: 20px; 
 }

@@ -6,12 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DdoSseoJo</title>
+    <link rel="stylesheet" href="resources/css/nav.css">
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" href="resources/css/SignStyle.css">
+    <link rel="stylesheet" href="resources/css/Search.css">
+    <link rel="stylesheet" href="resources/css/footerStyle.css">
 </head>
-<body>
-    <!-- @@@@@@@@@@@@@@@@@@ 헤더 @@@@@@@@@@@@@@@@@@ -->
-    <header>
+<header>
         <%
 		    request.setCharacterEncoding("UTF8");
 		    response.setCharacterEncoding("UTF-8");
@@ -41,6 +42,9 @@
 		    	}
 		%>
     </header>
+<body style="background-color: #E5E5E5;">
+    <!-- @@@@@@@@@@@@@@@@@@ 헤더 @@@@@@@@@@@@@@@@@@ -->
+    
     <!-- @@@@@@@@@@@@@@@@@@ 헤더끝 @@@@@@@@@@@@@@@@@@ -->
 
 

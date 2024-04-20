@@ -14,20 +14,28 @@
                 <div class="overlap-11">
                     <div class="group-2">
                         <div class="overlap-12">
-                            <div class="text-wrapper-18" style="cursor: pointer;" onclick="window.location.href = '${pageContext.request.contextPath}Main.jsp';">DDOSSEOJYO</div>
+                            <div class="text-wrapper-18" style="cursor: pointer;" onclick="window.location.href = '${pageContext.request.contextPath}/Main.jsp';">DDOSSEOJYO</div>
                             <div class="search-container">
 							    <div class="rectangle-2">
 							        <input type="search" name="keyword" id="search" placeholder="Search" />
 							        <span class="icon"><i class="fa fa-search"></i></span>
 							    </div>
 							</div>
-                            <div class="rectangle-3"></div>
-                            <div class="rectangle-4"></div>
-                            <div class="rectangle-5"></div>
+                            <div class="frame-3">
+				            	<div class="icon-heart-wrapper" style="cursor: pointer;" onclick="location.href = '';">
+				            		<img class="icon-heart" src="./resources/img/icon-heart.png" />
+				            	</div>
+				            	<div class="icon-profile-circled-wrapper" style="cursor: pointer;" onclick="location.href = '${pageContext.request.contextPath}/myPage.jsp';">
+				              		<img class="icon-profile-circled" src="./resources/img/icon-profile-circled.png" />
+				            	</div>
+				            	<div class="icon-menu-wrapper" style="cursor: pointer;" onclick="location.href = '';">
+				            		<img class="icon-menu" src="./resources/img/icon-menu.png" />
+				            	</div>
+				            </div>
                         </div>
                         <div class="group-wrapper">
                             <div class="group-3">
-                                <div class="text-wrapper-19">카테고리</div>
+                                <div class="text-wrapper-19" style="cursor: pointer;" onclick="location.href = 'Product.jsp';">카테고리</div>
                                 <div class="frame">
                                 <%
 									request.setCharacterEncoding("UTF-8");
@@ -37,14 +45,14 @@
 								    String UserID = (String) session.getAttribute("UserID");
 								    String Name = (String) session.getAttribute("Name");
 								%>
-									<div class="text-wrapper-20"><strong><%=Name%></strong> 님</div> 
+									<div class="text-wrapper-20" style="cursor: pointer;" onclick="window.location.href = '${pageContext.request.contextPath}/myPage.jsp';"><strong><%=Name%></strong> 님</div> 
                                     <div class="text-wrapper-20" style="cursor: pointer;" onclick="window.location.href = '${pageContext.request.contextPath}/LogoutDAO.jsp';">로그아웃</div>
                                 </div>
                                 <div class="frame-2">
-                                    <div class="text-wrapper-21">브랜드관</div>
-                                    <div class="text-wrapper-21">제품</div>
-                                    <div class="text-wrapper-21">핫딜</div>
-                                    <div class="text-wrapper-21">부품구매?</div>
+                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">브랜드관</div>
+                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">제품</div>
+                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">핫딜</div>
+                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">부품구매?</div>
                                 </div>
                             </div>
                         </div>
