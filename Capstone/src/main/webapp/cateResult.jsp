@@ -38,7 +38,8 @@
                     stmt.setString(1, selectedTypeCI);
                     stmt.setString(2, selectedBrand);
                 } else {
-                    query = "SELECT PrdName, BrandName, Price FROM product WHERE TypeName=? AND SecondType=? AND BrandName=?";
+//                     query = "SELECT PrdName, BrandName, Price FROM product WHERE TypeName=? AND SecondType=? AND BrandName=?";
+                    query = "SELECT PrdName, BrandName, Price FROM product WHERE SecondType=? AND ThirdType=? AND BrandName=?";
                     stmt = conn.prepareStatement(query);
                     stmt.setString(1, selectedTypeCI);
                     stmt.setString(2, selectedOption);
