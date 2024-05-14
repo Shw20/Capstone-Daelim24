@@ -6,6 +6,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="resources/css/myPage.css" />
+    <link rel="stylesheet" href="resources/css/SignStyle.css" />
     <link rel="stylesheet" href="resources/css/footerStyle.css" />
 </head>
 <nav>
@@ -68,9 +69,31 @@
 
 					</div>
 					<div class="frame-8">
+					<% 
+						if(Name == null){
+					%>
 							<div class="text-wrapper-12" style="cursor: pointer;"
-								onclick="location.href = '';">회원정보 수정</div>
-						</div>
+									onclick="showAlert()">회원정보 수정
+							</div>
+							
+					<%		
+						}
+						if(Name != null) {
+					%>
+							<div class="text-wrapper-12" style="cursor: pointer;"
+								onclick="location.href = 'Modify.jsp';">회원정보 수정</div>
+						<%	
+							if(Name.equals("관리자")){
+							%>
+								<div class="text-wrapper-12" style="cursor: pointer;"
+									onclick="location.href = 'adminModify.jsp';">회원정보 수정</div>
+							<%		
+							}
+						}
+						%>
+						<!-- <div class="text-wrapper-12" style="cursor: pointer;"
+								onclick="location.href = '';">회원정보 수정</div>-->
+						</div> 
 					</div>
 				</div>
             <div class="frame-9">
@@ -177,6 +200,11 @@
         </div>
     </div>
 </body>
+<script>
+    function showAlert() {
+        alert("로그인 후 이용해주세요");
+    }
+</script>
 <footer>
 	<%@ include file="resources/layout/footer.jsp"%>
 </footer>

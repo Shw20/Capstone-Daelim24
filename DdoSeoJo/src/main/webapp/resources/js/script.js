@@ -64,7 +64,7 @@ function JoinForm(){ /* 회원가입 유효성검사 */
 		}
 	}*/
 	
-	function checkPasswordMatch() { //비밀번호가 일치한지
+	function checkPasswordMatch() { //회원가입 비밀번호가 일치한지
         var password = document.getElementById("password").value;
         var confirmPassword = document.getElementById("confirmPassword").value;
         var message = document.getElementById("passwordMatchMessage");
@@ -77,6 +77,7 @@ function JoinForm(){ /* 회원가입 유효성검사 */
             message.style.color = "green";
         }
     }
+    
     
  document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.overlap-3').addEventListener('click', function() {

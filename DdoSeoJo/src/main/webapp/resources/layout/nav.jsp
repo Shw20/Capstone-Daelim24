@@ -46,9 +46,9 @@
                                 </div>
                                 <div class="frame-2">
                                     <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">브랜드관</div>
-                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">제품</div>
+                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="showAlert()">제품등록</div>
                                     <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">핫딜</div>
-                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">부품구매?</div>
+                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">부품</div>
                                 </div>
                             </div>
                         </div>
@@ -78,6 +78,10 @@
             </div>
     </div>
 </nav>
-    
+<script>
+    function showAlert() {
+        alert("로그인 후 이용해주세요");
+    }
+</script>
 </body>
 </html>

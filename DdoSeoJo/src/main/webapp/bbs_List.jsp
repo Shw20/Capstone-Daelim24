@@ -35,9 +35,6 @@
     }
 %>
 </head>
-<nav>
-    <%@ include file="resources/layout/nav.jsp"%>
-</nav>
 <body style="margin-top: 200px;">
 <main>
     <h1>제품 게시판</h1>
