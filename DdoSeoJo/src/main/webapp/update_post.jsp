@@ -7,38 +7,41 @@
 <link rel="stylesheet" href="resources/css/SignStyle.css" />
 <link rel="stylesheet" href="resources/css/footerStyle.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<%
-    request.setCharacterEncoding("UTF8");
-    response.setCharacterEncoding("UTF-8");
-    
-    Integer IDX = (Integer) session.getAttribute("IDX");
-    String UserID = (String) session.getAttribute("UserID");
-    String Name = (String) session.getAttribute("Name");
-    
-    if (Name == null) {%>
-        <jsp:include page="resources/layout/nav.jsp"></jsp:include>
-<%
-    }
-    if (Name != null) {
-%>
-    <%
-        if (Name.equals("관리자")) {
-%>
-            <jsp:include page="resources/layout/adminNav.jsp"></jsp:include>
-<%
-        } else {
-%>
-            <jsp:include page="resources/layout/userNav.jsp"></jsp:include>
-<%
-        }
-    }
-%>
 </head>
-<nav>
-    <%@ include file="resources/layout/nav.jsp"%>
-</nav>
-</head>
+<header>
+        <%
+		    request.setCharacterEncoding("UTF8");
+		    response.setCharacterEncoding("UTF-8");
+		    
+		    Integer IDX = (Integer) session.getAttribute("IDX");
+		    String UserID = (String) session.getAttribute("UserID");
+		    String Name = (String) session.getAttribute("Name");
+		
+		    
+		
+		        if (Name == null) {	
+		%>
+		    	<script>
+			        alert("로그인이 필요합니다.");
+			        window.location.href = "Login.jsp";
+	    		</script>
+		<%
+		        }
+		        if (Name != null) {
+		%>
+		    <%
+		        	if (Name.equals("관리자")) {
+		    %>
+		            	<jsp:include page="resources/layout/adminNav.jsp"></jsp:include>
+		    <%
+		        	} else {
+		    %>
+		            <jsp:include page="resources/layout/userNav.jsp"></jsp:include>
+		    <%
+		        	}
+		    	}
+		%>
+    </header>
 <body style="margin-top: 200px;">
 <main>
     <h1>게시물 수정</h1>

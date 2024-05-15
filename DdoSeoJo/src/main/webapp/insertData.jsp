@@ -17,8 +17,10 @@
         // Java 코드 시작
         String message = "";
         request.setCharacterEncoding("UTF-8");
-
+        
+        Integer IDX = (Integer) session.getAttribute("IDX");
         String UserID = (String) session.getAttribute("UserID");
+        String Name = (String) session.getAttribute("Name");
 
         String realFolder = "";
         String saveFolder = "image"; // 이미지를 저장할 하위 디렉토리 이름 (생략 가능)
@@ -60,7 +62,7 @@
                     // SQL 쿼리 실행
                     String sql = "INSERT INTO bbs VALUES (null, 1, ?, ?, ?, '판매중', NOW(), NOW(), ?)";
                     try (PreparedStatement pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
-                        pstmt.setString(1, UserID);
+                        pstmt.setInt(1, IDX);
                         pstmt.setString(2, title);
                         pstmt.setString(3, content);
                         pstmt.setString(4, fileName);

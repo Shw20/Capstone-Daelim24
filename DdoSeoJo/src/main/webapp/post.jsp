@@ -7,38 +7,37 @@
 <link rel="stylesheet" href="resources/css/SignStyle.css" />
 <link rel="stylesheet" href="resources/css/footerStyle.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<%
-    request.setCharacterEncoding("UTF8");
-    response.setCharacterEncoding("UTF-8");
-    
-    Integer IDX = (Integer) session.getAttribute("IDX");
-    String UserID = (String) session.getAttribute("UserID");
-    String Name = (String) session.getAttribute("Name");
-    
-    if (Name == null) {
-%>
-        <jsp:include page="resources/layout/nav.jsp"></jsp:include>
-<%
-    }
-    if (Name != null) {
-%>
-    <%
-        if (Name.equals("관리자")) {
-%>
-            <jsp:include page="resources/layout/adminNav.jsp"></jsp:include>
-<%
-        } else {
-%>
-            <jsp:include page="resources/layout/userNav.jsp"></jsp:include>
-<%
-        }
-    }
-%>
 </head>
-<nav>
-    <%@ include file="resources/layout/nav.jsp"%>
-</nav>
+<header>
+        <%
+		    request.setCharacterEncoding("UTF8");
+		    response.setCharacterEncoding("UTF-8");
+		    
+		    Integer IDX = (Integer) session.getAttribute("IDX");
+		    String UserID = (String) session.getAttribute("UserID");
+		    String Name = (String) session.getAttribute("Name");
+		
+		    
+		
+		        if (Name == null) {	%>
+		    		<jsp:include page="resources/layout/nav.jsp"></jsp:include>
+		<%
+		        }
+		        if (Name != null) {
+		%>
+		    <%
+		        	if (Name.equals("관리자")) {
+		    %>
+		            	<jsp:include page="resources/layout/adminNav.jsp"></jsp:include>
+		    <%
+		        	} else {
+		    %>
+		            <jsp:include page="resources/layout/userNav.jsp"></jsp:include>
+		    <%
+		        	}
+		    	}
+		%>
+    </header>
 </head>
 <body style="margin-top: 200px;">
 <main>
@@ -67,7 +66,7 @@
 
             // 결과 출력
             if (rs.next()) {
-                String postUserID = rs.getString("userID");
+                int postUserID = rs.getInt("userID");
     %>
     <p><strong>User ID:</strong> <%= postUserID %></p>
     <p><strong>Content:</strong> <%= rs.getString("content") %></p>
@@ -82,8 +81,7 @@
     <!-- 수정 및 삭제 버튼 -->
     <%
         // 세션에 있는 사용자 ID와 게시물을 작성한 사용자 ID 비교
-        String sessionUserID = (String) session.getAttribute("UserID");
-        if (sessionUserID != null && sessionUserID.equals(postUserID)) {
+        if (IDX != null && IDX == postUserID) {
     %>
         <!-- 수정 버튼 -->
         <form method="post" action="update_post.jsp">
