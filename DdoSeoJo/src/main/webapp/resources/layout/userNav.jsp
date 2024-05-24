@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="frame-2">
                                     <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">브랜드관</div>
-                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">제품</div>
+                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '${pageContext.request.contextPath}/bbs_List.jsp';">제품</div>
                                     <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">핫딜</div>
                                     <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">부품구매?</div>
                                 </div>
