@@ -6,6 +6,7 @@
 <%@ include file="resources/layout/Header.jsp"%>
 <link rel="stylesheet" href="resources/css/SignStyle.css" />
 <link rel="stylesheet" href="resources/css/footerStyle.css">
+<link rel="stylesheet" href="resources/css/postWrite.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <header>
@@ -42,7 +43,7 @@
 		    	}
 		%>
     </header>
-<body style="margin-top: 200px;">
+<body>
 <main>
     <h1>게시물 수정</h1>
     <%
@@ -74,7 +75,9 @@
     <form method="post" action="update_Submit.jsp">
         <input type="hidden" name="bbsID" value="<%= bbsID %>">
         <p>User ID: <%= rs.getString("userID") %></p>
-        <p>Content: <input type="text" name="content" value="<%= rs.getString("content") %>"></p>
+        <label for="title">제목:</label>
+        <input type="text" id="title" name="title" required>
+        <textarea id="content" name="content" required></textarea>
         <p>Create Time: <%= rs.getString("CreateTime") %></p>
         <input type="submit" value="수정확인">
     </form>

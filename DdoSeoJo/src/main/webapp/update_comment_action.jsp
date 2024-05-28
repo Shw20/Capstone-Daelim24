@@ -3,58 +3,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>게시물 수정</title>
+    <title>댓글 수정 처리</title>
 </head>
 <body>
-    <h1>게시물 수정 결과</h1>
     <%
-    	request.setCharacterEncoding("UTF-8");
+	    request.setCharacterEncoding("UTF8");
+	    response.setCharacterEncoding("UTF-8");
+	    
         Connection conn = null;
         PreparedStatement pstmt = null;
+        int commentID = 0;
+        String content = request.getParameter("content");
+
+        // 게시물 ID 가져오기
+        int bbsID = Integer.parseInt(request.getParameter("bbsID"));
 
         try {
-            // 데이터베이스 연결
             String url = "jdbc:mysql://localhost:3306/capstone";
             String user = "root";
             String password = "dltmdghks0126";
             Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection(url, user, password);
+			
 
-            // 게시물 ID 및 수정할 내용 가져오기
-            int bbsID = Integer.parseInt(request.getParameter("bbsID"));
-            String content = request.getParameter("content");
-            String Title = request.getParameter("title");
+            // 댓글 ID 가져오기
+            if (request.getParameter("commentID") != null) {
+                commentID = Integer.parseInt(request.getParameter("commentID"));
+            }
 
-            // SQL 쿼리 실행 - 해당 게시물 수정
-            String sql = "UPDATE bbs SET content = ?, Title =?, UpdateTime = now() WHERE bbsID = ?";
+            // 댓글 업데이트
+            String sql = "UPDATE comment SET content = ? WHERE commentID = ?";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, content);
-            pstmt.setString(2, Title);
-            pstmt.setInt(3, bbsID);
-            int rowsAffected = pstmt.executeUpdate();
+            pstmt.setInt(2, commentID);
+            int result = pstmt.executeUpdate();
 
-            // 수정 결과 출력
-            if (rowsAffected > 0) {
-   			%>
-				<script>
-					alert('게시물이 성공적으로 수정되었습니다.');
-					location.href="post.jsp?bbsID=<%= bbsID %>";  
-				</script>
-			<%
-    
+            if (result > 0) {
+    %>
+                <script>
+                    alert('댓글이 수정되었습니다.');
+                    location.href="post.jsp?bbsID=<%= bbsID %>";   // 이전 페이지로 돌아가기
+                </script>
+    <%
             } else {
-   			%>
-				<script>
-					alert('게시물 수정에 실패했습니다.');
-					location.href="update_post.jsp?bbsID=<%= bbsID %>";  
-				</script>
-			<%
+    %>
+                <script>
+                    alert('댓글 수정에 실패했습니다.');
+                    history.back(); // 이전 페이지로 돌아가기
+                </script>
+    <%
             }
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            // 연결 및 자원 해제
             if (pstmt != null) {
                 try {
                     pstmt.close();
