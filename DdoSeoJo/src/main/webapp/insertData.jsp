@@ -62,13 +62,13 @@
             out.println("<p>제목: " + title + "</p>");
             out.println("<p>내용: " + content + "</p>");
             
+            int PrdID = -1; // product ID 초기화
+            
             if(TypeName != null && SecondType != null && BrandName != null && productName != null && priceStr != null){
             	Class.forName("com.mysql.cj.jdbc.Driver");
             	
             	try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/capstone", "root", "dltmdghks0126")) {
-                    // SQL 쿼리 실행
-                    
-                    
+                    // product 테이블에 제품 추가
             		String sql = "INSERT INTO product VALUES (null, ?, ?, ?, ?, ?, ?, ?)";
                     try (PreparedStatement pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)){
                         pstmt.setString(1, productName);
@@ -82,9 +82,8 @@
                         int rowsAffected = pstmt.executeUpdate();
                         if (rowsAffected > 0) {
                             ResultSet generatedKeys = pstmt.getGeneratedKeys();
-                            int bbsID = -1;
                             if (generatedKeys.next()) {
-                                bbsID = generatedKeys.getInt(1);
+                                PrdID = generatedKeys.getInt(1); // 새로 생성된 product ID 가져오기
                             } else {
                                 message = "데이터 추가에 실패했습니다.";
                             }
@@ -104,13 +103,14 @@
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 
                 try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/capstone", "root", "dltmdghks0126")) {
-                    // SQL 쿼리 실행
-                    String sql = "INSERT INTO bbs VALUES (null, 1, ?, ?, ?, '판매중', NOW(), NOW(), ?)";
+                    // bbs 테이블에 데이터 추가
+                    String sql = "INSERT INTO bbs VALUES (null, ?, ?, ?, ?, '판매중', NOW(), NOW(), ?)";
                     try (PreparedStatement pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
-                        pstmt.setInt(1, IDX);
-                        pstmt.setString(2, title);
-                        pstmt.setString(3, content);
-                        pstmt.setString(4, fileName);
+                        pstmt.setInt(1, PrdID); // 새로 생성된 product ID 사용
+                        pstmt.setInt(2, IDX);
+                        pstmt.setString(3, title);
+                        pstmt.setString(4, content);
+                        pstmt.setString(5, fileName);
                         
                         int rowsAffected = pstmt.executeUpdate();
                         if (rowsAffected > 0) {
@@ -165,3 +165,4 @@
     %>
 </body>
 </html>
+
