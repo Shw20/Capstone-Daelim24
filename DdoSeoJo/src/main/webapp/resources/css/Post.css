@@ -126,10 +126,10 @@ h1 {
     background-color: #c82333;
 }
 
-.buttons input[type="submit"].status{
+.buttons input[type="submit"].Status{
 	background-color: #ffd400;
 }
 
-.buttons input[type="submit"].status:hover{
+.buttons input[type="submit"].Status:hover{
 	background-color: #f7b008;
 }

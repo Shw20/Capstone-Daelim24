@@ -50,10 +50,55 @@
             String fileName = multi.getFilesystemName("fileName");
             String title = multi.getParameter("title");
             String content = multi.getParameter("content");
+            String TypeName = multi.getParameter("category1");
+            String SecondType = multi.getParameter("category2");
+            String ThirdType = multi.getParameter("category3");
+            String BrandName = multi.getParameter("brand");
+            String productName = multi.getParameter("productName");
+            String priceStr = multi.getParameter("price");
+            int price = Integer.parseInt(priceStr);
 
             out.println("<p>파일 이름: " + fileName + "</p>");
             out.println("<p>제목: " + title + "</p>");
             out.println("<p>내용: " + content + "</p>");
+            
+            if(TypeName != null && SecondType != null && BrandName != null && productName != null && priceStr != null){
+            	Class.forName("com.mysql.cj.jdbc.Driver");
+            	
+            	try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/capstone", "root", "dltmdghks0126")) {
+                    // SQL 쿼리 실행
+                    
+                    
+            		String sql = "INSERT INTO product VALUES (null, ?, ?, ?, ?, ?, ?, ?)";
+                    try (PreparedStatement pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)){
+                        pstmt.setString(1, productName);
+                        pstmt.setInt(2, price);
+                        pstmt.setString(3, TypeName);
+                        pstmt.setString(4, BrandName);
+                        pstmt.setString(5, SecondType);
+                        pstmt.setString(6, ThirdType);
+                        pstmt.setString(7, fileName);
+                        
+                        int rowsAffected = pstmt.executeUpdate();
+                        if (rowsAffected > 0) {
+                            ResultSet generatedKeys = pstmt.getGeneratedKeys();
+                            int bbsID = -1;
+                            if (generatedKeys.next()) {
+                                bbsID = generatedKeys.getInt(1);
+                            } else {
+                                message = "데이터 추가에 실패했습니다.";
+                            }
+                        }
+                        
+                    }catch (SQLException e) {
+                        message = "데이터베이스 연결 또는 쿼리 실행 중 오류가 발생했습니다.";
+                        log("DB연결 오류: " + e.getMessage());
+                    }
+            	}catch (SQLException e) {
+                    message = "데이터베이스 연결 또는 쿼리 실행 중 오류가 발생했습니다.";
+                    log("DB연결 오류: " + e.getMessage());
+                }
+            }
 
             if (title != null && content != null && fileName != null) {
                 Class.forName("com.mysql.cj.jdbc.Driver");
@@ -87,7 +132,7 @@
                                             // HTML 코드 시작
                                             %>
                                             <script>
-                                                alert('데이터가 성공적으로 추가되었습니다.');
+                                                alert('글쓰기에 성공했습니다.');
                                                 location.href= "post.jsp?bbsID=<%= bbsID %>"
                                             </script>
                                             <%

@@ -68,13 +68,6 @@
             	String postUserID = rs.getString("u.userID");
                 int postUserIDX = rs.getInt("b.userID");
                 String postStatus = rs.getString("b.status");
-               	if("판매완료".equals(postStatus)){
-               		%>
-               		<script>
-               			alert("판매완료 된 제품입니다.")
-               		</script>
-               		<%
-               	}
     %>
     <h1><%=rs.getString("b.title") %></h1>
     
