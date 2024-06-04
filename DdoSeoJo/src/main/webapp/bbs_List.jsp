@@ -6,7 +6,7 @@
 <%@ include file="resources/layout/Header.jsp"%>
 <link rel="stylesheet" href="resources/css/SignStyle.css" />
 <link rel="stylesheet" href="resources/css/footerStyle.css">
-<link rel="stylesheet" href="resources/css/galleryStyle.css"> <!-- 추가된 CSS 파일 -->
+<link rel="stylesheet" href="resources/css/galleryStyle.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <header>
@@ -18,25 +18,22 @@
             String UserID = (String) session.getAttribute("UserID");
             String Name = (String) session.getAttribute("Name");
         
-                if (Name == null) { %>
-                    <jsp:include page="resources/layout/nav.jsp"></jsp:include>
+            if (Name == null) { %>
+                <jsp:include page="resources/layout/nav.jsp"></jsp:include>
+        <%
+            } else {
+                if (Name.equals("관리자")) {
+        %>
+                    <jsp:include page="resources/layout/adminNav.jsp"></jsp:include>
+        <%
+                } else {
+        %>
+                <jsp:include page="resources/layout/userNav.jsp"></jsp:include>
         <%
                 }
-                if (Name != null) {
+            }
         %>
-            <%
-                    if (Name.equals("관리자")) {
-            %>
-                        <jsp:include page="resources/layout/adminNav.jsp"></jsp:include>
-            <%
-                    } else {
-            %>
-                    <jsp:include page="resources/layout/userNav.jsp"></jsp:include>
-            <%
-                    }
-                }
-        %>
-    </header>
+</header>
 <body style="margin-top: 200px;">
 <main>
     <div class="board-header">
@@ -48,6 +45,13 @@
             Connection conn = null;
             PreparedStatement pstmt = null;
             ResultSet rs = null;
+            int currentPage = 1;
+            int recordsPerPage = 6; // 한 페이지에 표시할 게시글 수 (2줄 * 3개 = 6개)
+            int totalRecords = 0;
+            if(request.getParameter("page") != null) {
+                currentPage = Integer.parseInt(request.getParameter("page"));
+            }
+            int startRecord = (currentPage - 1) * recordsPerPage;
             
             try {
                 // 데이터베이스 연결
@@ -57,11 +61,26 @@
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 conn = DriverManager.getConnection(url, user, password);
 
-                // SQL 쿼리 실행 - user 테이블과 조인하여 userID를 가져옴
+                // 게시글 총 개수 확인
+                String countSql = "SELECT COUNT(*) AS total FROM bbs";
+                pstmt = conn.prepareStatement(countSql);
+                rs = pstmt.executeQuery();
+                totalRecords = 0;
+                if(rs.next()) {
+                    totalRecords = rs.getInt("total");
+                }
+                rs.close();
+                pstmt.close();
+
+                // 페이지네이션 SQL 쿼리
                 String sql = "SELECT bbs.status, bbs.bbsID, bbs.userID AS userIDX, bbs.CreateTime, bbs.Title, bbs.image, user.UserID " +
                              "FROM bbs " +
-                             "JOIN user ON bbs.userID = user.IDX"; // 조인 조건을 user.IDX로 설정
+                             "JOIN user ON bbs.userID = user.IDX " +
+                             "ORDER BY bbs.CreateTime DESC " + // 작성일 기준 내림차순 정렬
+                             "LIMIT ?, ?";
                 pstmt = conn.prepareStatement(sql);
+                pstmt.setInt(1, startRecord);
+                pstmt.setInt(2, recordsPerPage);
                 rs = pstmt.executeQuery();
 
                 // 결과 출력
@@ -79,9 +98,9 @@
                 </div>
                 <div class="info">
                     <span>제목: <%= rs.getString("Title") %></span>
-                    <span>판매자: <%= rs.getString("UserID") %></span> <!-- 수정된 부분 -->
+                    <span>판매자: <%= rs.getString("UserID") %></span>
                     <span>작성일: <%= rs.getString("CreateTime") %></span>
-                    <span>판매상태: <%=rs.getString("Status") %></span>
+                    <span>판매상태: <%= rs.getString("status") %></span>
                 </div>
                 <a class="overlay" href="post.jsp?bbsID=<%= rs.getInt("bbsID") %>">View Post</a>
             </div>
@@ -90,7 +109,6 @@
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {
-                // 연결 및 자원 해제
                 if (rs != null) {
                     try {
                         rs.close();
@@ -114,6 +132,29 @@
                 }
             }
         %>
+    </div>
+    <div class="pagination">
+        <%
+            int totalPages = (int) Math.ceil(totalRecords * 1.0 / recordsPerPage);
+            if (currentPage > 1) {
+        %>
+                <a href="bbs_List.jsp?page=<%= currentPage - 1 %>">이전</a>
+        <%  } %>
+        <%
+            for (int i = 1; i <= totalPages; i++) {
+                if (i == currentPage) {
+        %>
+                    <span><%= i %></span>
+        <%      } else { %>
+                    <a href="bbs_List.jsp?page=<%= i %>"><%= i %></a>
+        <%      }
+            }
+        %>
+        <%
+            if (currentPage < totalPages) {
+        %>
+                <a href="bbs_List.jsp?page=<%= currentPage + 1 %>">다음</a>
+        <%  } %>
     </div>
 </main>
 <footer>

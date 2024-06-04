@@ -132,7 +132,7 @@
                                             // HTML 코드 시작
                                             %>
                                             <script>
-                                                alert('글쓰기에 성공했습니다.');
+                                                alert('판매 완료시 꼭 판매완료 버튼을 눌러주세요.');
                                                 location.href= "post.jsp?bbsID=<%= bbsID %>"
                                             </script>
                                             <%
