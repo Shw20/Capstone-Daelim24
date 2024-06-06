@@ -18,27 +18,19 @@ function showCategory2() {
     category2Div.style.display = "block";
 
     switch (category1) {
-        case "Laptop":
+        case "Laptops":
             category2.innerHTML = `
-                <option value="home-office">가정용</option>
-                <option value="gamming">게이밍</option>
+                <option value="Laptop1">노트북</option>
+                <option value="Laptop2">주변기기</option>
             `;
-            showcategory3()
-            break;
-        case "Laptop2":
-            category2.innerHTML = `
-                <option value="mouse">마우스</option>
-                <option value="headset">키보드</option>
-                <option value="keyboard">헤드셋</option>
-                <option value="microphone">마이크</option>
-            `;
+            showcategory3();
             break;
         case "Desktop":
             category2.innerHTML = `
                 <option value="main">컴퓨터</option>
                 <option value="monitor">모니터</option>
             `;
-            showcategory3()
+            showcategory3();
             break;
         case "Smartphone":
             category2.innerHTML = `
@@ -51,14 +43,14 @@ function showCategory2() {
                 <option value="tabletPC">태블릿</option>
                 <option value="wearable">웨어러블</option>
             `;
-            showcategory3()
+            showcategory3();
             break;
         case "View":
             category2.innerHTML = `
                 <option value="TV">TV</option>
                 <option value="beamp">영상</option>
             `;
-            showcategory3()
+            showcategory3();
             break;
         case "HomeAppliances":
             category2.innerHTML = `
@@ -96,41 +88,20 @@ function showcategory3() {
     category3Div.style.display = "block";
 
     switch (category2) {
-        case "home-office":
+        case "Laptop1":
         	category3.innerHTML = `
-                <option value="-">해당사항 없음</option>
+                <option value="home-office">사무용</option>
+                <option value="gamming">게임용</option>
             `;
             showbrand();
             break;
-        case "gamming":
+        case "Laptop2":
         	category3.innerHTML = `
-                <option value="-">해당사항 없음</option>
+                <option value="mouse">마우스</option>
+                <option value="headset">헤드셋</option>
+                <option value="keyboard">키보드</option>
+                <option value="microphone">마이크</option>
             `;
-            showbrand();
-            break;
-        case "mouse":
-        	category3.innerHTML = `
-                <option value="-">해당사항 없음</option>
-            `;
-            showbrand();
-            break;
-        case "keyboard":
-        	category3.innerHTML = `
-                <option value="-">해당사항 없음/option>
-            `;
-            showbrand();
-            break;
-        case "headset":
-        	category3.innerHTML = `
-                <option value="-">해당사항 없음</option>
-            `;
-            showbrand();
-            break;
-        case "microphone":
-        	category3.innerHTML = `
-                <option value="-">해당사항 없음</option>
-            `;
-            showbrand();
             break;
         case "main":
         	category3.innerHTML = `
@@ -193,12 +164,14 @@ function showcategory3() {
                 <option value="drum">드럼 세탁기</option>
                 <option value="top">통돌이 세탁기</option>
             `;
+            showbrand();
             break;
         case "dryer":
             category3.innerHTML = `
                 <option value="heatpump">히트펌프</option>
                 <option value="condensation">콘덴세이션</option>
             `;
+            showbrand();
             break;
         case "air":
             category3.innerHTML = `
@@ -233,12 +206,14 @@ function showcategory3() {
                 <option value="stand">스탠드형</option>
                 <option value="build">빌트인형</option>
             `;
+            showbrand();
             break;
         case "oven":
             category3.innerHTML = `
                 <option value="stand">스탠드형</option>
                 <option value="build">빌트인형</option>
             `;
+            showbrand();
             break;
         default:
             category3Div.style.display = "none";
@@ -250,68 +225,70 @@ function showbrand() {
 	var category2 = document.getElementById("category2").value;
     var brandDiv = document.getElementById("brand-div"); // 변경된 변수 이름
     var brand = document.getElementById("brand");
+    var category3 = document.getElementById("category3").value;
+
 
     brand.innerHTML = ""; // 기존 옵션 제거
     brandDiv.style.display = "block";
 
     switch (category2) {
-    case "home-office":
-    	brand.innerHTML = `
-            <option value="LG">LG</option>
-            <option value="SamSung">SamSung</option>
-            <option value="Apple">Apple</option>
-            <option value="HP">HP</option>
-            <option value="Lenovo">Lenovo</option>
-        `;
+    case "Laptop1":
+    	if(category3 == "home-office"){
+    		brand.innerHTML = `
+	            <option value="LG">LG</option>
+	            <option value="SamSung">SamSung</option>
+	            <option value="Apple">Apple</option>
+	            <option value="HP">HP</option>
+	            <option value="Lenovo">Lenovo</option>
+	        `;
+    	}else{
+    		brand.innerHTML = `
+                <option value="LG">LG</option>
+                <option value="SamSung">SamSung</option>
+                <option value="HP">HP</option>
+                <option value="Lenovo">Lenovo</option>
+            `;
+    	}
         break;
-	case "gamming":
-    	brand.innerHTML = `
-            <option value="LG">LG</option>
-            <option value="SamSung">SamSung</option>
-            <option value="HP">HP</option>
-            <option value="Lenovo">Lenovo</option>
-        `;
+	case "Laptop2":
+		if(category3 == "mouse"){
+			brand.innerHTML = `
+	            <option value="앱코">앱코</option>
+	            <option value="로지텍">로지텍</option>
+	            <option value="SamSung">SamSung</option>
+	            <option value="ASUS">ASUS</option>
+	            <option value="Britz">Britz</option>
+	        `;
+		}else if(category3 == "headset"){
+			brand.innerHTML = `
+	            <option value="SONY">SONY</option>
+	            <option value="JBL">JBL</option>
+	            <option value="AKG">AKG</option>
+	            <option value="젠하이저">젠하이저</option>
+	            <option value="슈어">슈어</option>
+	        `;
+		}else if(category3 == "keyboard"){
+			brand.innerHTML = `
+	            <option value="로지텍">로지텍</option>
+	            <option value="앱코">앱코</option>
+	            <option value="ASUS">ASUS</option>
+	            <option value="알파스캔">알파스캔</option>
+	        `;
+		}else{
+			brand.innerHTML = `
+	            <option value="앱코">앱코</option>
+	            <option value="슈어">슈어</option>
+	            <option value="젠하이저">젠하이저</option>
+	            <option value="AKG">AKG</option>
+	            <option value="Britz">Britz</option>
+	        `;
+		}
         break;
 	case "main":
     	brand.innerHTML = `
             <option value="etc">기타</option>
         `;
         break;
-    case "mouse":
-    	brand.innerHTML = `
-            <option value="앱코">앱코</option>
-            <option value="로지텍">로지텍</option>
-            <option value="SamSung">SamSung</option>
-            <option value="ASUS">ASUS</option>
-            <option value="Britz">Britz</option>
-        `;
-        break;
-    case "headset":
-    	brand.innerHTML = `
-            <option value="SONY">SONY</option>
-            <option value="JBL">JBL</option>
-            <option value="AKG">AKG</option>
-            <option value="젠하이저">젠하이저</option>
-            <option value="슈어">슈어</option>
-        `;
-        break;
-    case "keyboard":
-    	brand.innerHTML = `
-            <option value="로지텍">로지텍</option>
-            <option value="앱코">앱코</option>
-            <option value="ASUS">ASUS</option>
-            <option value="알파스캔">알파스캔</option>
-        `;
-        break;
-    case "microphone":
-    	brand.innerHTML = `
-            <option value="앱코">앱코</option>
-            <option value="슈어">슈어</option>
-            <option value="젠하이저">젠하이저</option>
-            <option value="AKG">AKG</option>
-            <option value="Britz">Britz</option>
-        `;
-   		break;
     case "wearable":
     	brand.innerHTML = `
             <option value="SamSung">SamSung</option>
@@ -496,8 +473,7 @@ function showbrand() {
             <label for="category1">카테고리:</label>
             <select id="category1" name="category1" onchange="showCategory2()" required>
                 <option value="">카테고리를 선택하세요</option>
-                <option value="Laptop">노트북</option>
-                <option value="Laptop2">주변기기</option>
+                <option value="Laptops">노트북|주변기기</option>
                 <option value="Desktop">컴퓨터|모니터</option>
                 <option value="Smartphone">스마트폰</option>
                 <option value="Tablet">테블릿|웨어러블</option>
