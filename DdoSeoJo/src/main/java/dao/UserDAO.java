@@ -11,7 +11,7 @@ public class UserDAO {
     public UserDAO() {
         try {
         	Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/DdoSseoJo?&useSSL=false";
+            String url = "jdbc:mysql://localhost:3306/capstone?&useSSL=false";
             String username = "root";
             String password = "abcd1234";
             conn = DriverManager.getConnection(url, username, password);
