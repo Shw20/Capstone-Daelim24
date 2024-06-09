@@ -77,19 +77,19 @@
             <a href="">
                 <div class="items-short">
                     <img src="./resources//img/items-short-img.png" alt="">
-                    <p class="items-short-title">품절임박 상품</p>
+                    <p class="items-short-title">판매종료 임박 상품</p>
                 </div>
             </a>
             <a href="">
                 <div class="items-short">
                     <img src="./resources/img/items-short-img.png" alt="">
-                    <p class="items-short-title">A+ 맞고싶어요</p>
+                    <p class="items-short-title">최다 조회수</p>
                 </div>
             </a>
             <a href="">
                 <div class="items-short">
                     <img src="./resources/img/items-short-img.png" alt="">
-                    <p class="items-short-title">안녕하세요 반갑습니다</p>
+                    <p class="items-short-title">상품 더 알아보기</p>
                 </div>
             </a>
         </div>

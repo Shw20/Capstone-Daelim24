@@ -44,6 +44,25 @@ public class UserDAO {
             e.printStackTrace();
         }
     }
+    
+    public void updateUserPassword(String userID, String newPassword) {
+        if (this.conn == null) {
+            System.out.println("데이터베이스 연결이 실패했습니다");
+            return;
+        }
+
+        String sql = "UPDATE `user` SET Pwd = ? WHERE UserID = ?";
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, newPassword);
+            pstmt.setString(2, userID);
+            pstmt.executeUpdate();
+            pstmt.close();
+            System.out.println("비밀번호 수정 성공");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void close() {
         if (conn != null) { // conn이 null이 아닌 경우에만 연결을 닫음

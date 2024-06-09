@@ -13,6 +13,16 @@
         <servlet-name>JoinServlet</servlet-name>
         <url-pattern>/JoinServlet</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+	    <servlet-name>ModifyServlet</servlet-name>
+	    <servlet-class>dao.ModifyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>ModifyServlet</servlet-name>
+	    <url-pattern>/ModifyServlet</url-pattern>
+	</servlet-mapping>
+    
 
     <!-- 기타 설정 등 -->
 
