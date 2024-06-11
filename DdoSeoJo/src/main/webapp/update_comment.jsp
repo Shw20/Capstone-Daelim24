@@ -28,9 +28,9 @@
 
 
             try {
-                String url = "jdbc:mysql://localhost:3306/capstone";
+                String url = "jdbc:mysql://localhost:3306/DdoSseoJo";
                 String user = "root";
-                String password = "dltmdghks0126";
+                String password = "abcd1234";
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 conn = DriverManager.getConnection(url, user, password);
 
