@@ -24,12 +24,14 @@
             // 게시물 ID 및 수정할 내용 가져오기
             int bbsID = Integer.parseInt(request.getParameter("bbsID"));
             String content = request.getParameter("content");
+            String Title = request.getParameter("title");
 
             // SQL 쿼리 실행 - 해당 게시물 수정
-            String sql = "UPDATE bbs SET content = ?, UpdateTime = now() WHERE bbsID = ?";
+            String sql = "UPDATE bbs SET content = ?, Title =?, UpdateTime = now() WHERE bbsID = ?";
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, content);
-            pstmt.setInt(2, bbsID);
+            pstmt.setString(2, Title);
+            pstmt.setInt(3, bbsID);
             int rowsAffected = pstmt.executeUpdate();
 
             // 수정 결과 출력

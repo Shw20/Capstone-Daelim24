@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.post-content {
+    padding: 20px;
+    margin: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.post-content img {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.post-content p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.comment-section {
+    overflow-y: hidden;
+    border: 1px solid #ddd; 
+    margin-top: 30px;
+}
+
+.comment-section h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.comment {
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.comment p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.comment form {
+    display: flex;
+    margin-top: 20px;
+}
+
+.comment input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+
+.comment input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+    
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttons form {
+    margin-left: 10px;
+}
+
+.buttons input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.buttons input[type="submit"].delete {
+    background-color: #dc3545;
+}
+
+.buttons input[type="submit"].delete:hover {
+    background-color: #c82333;
+}
+
+.buttons input[type="submit"].Status{
+	background-color: #ffd400;
+}
+
+.buttons input[type="submit"].Status:hover{
+	background-color: #f7b008;
+}
