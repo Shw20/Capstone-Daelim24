@@ -23,7 +23,7 @@
         String Name = (String) session.getAttribute("Name");
 
         String realFolder = "";
-        String saveFolder = "image"; // 이미지를 저장할 하위 디렉토리 이름 (생략 가능)
+        String saveFolder = "resources/img"; // 이미지를 저장할 하위 디렉토리 이름 (생략 가능)
 
         // saveFolder가 비어있지 않으면 디렉토리 경로에 하위 디렉토리 추가
         if (!saveFolder.isEmpty()) {
@@ -67,7 +67,7 @@
             if(TypeName != null && SecondType != null && BrandName != null && productName != null && priceStr != null){
             	Class.forName("com.mysql.cj.jdbc.Driver");
             	
-            	try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/capstone", "root", "dltmdghks0126")) {
+            	try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/DdoSseoJo", "root", "abcd1234")) {
                     // product 테이블에 제품 추가
             		String sql = "INSERT INTO product VALUES (null, ?, ?, ?, ?, ?, ?, ?)";
                     try (PreparedStatement pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)){
@@ -102,7 +102,7 @@
             if (title != null && content != null && fileName != null) {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 
-                try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/capstone", "root", "dltmdghks0126")) {
+                try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/DdoSseoJo", "root", "abcd1234")) {
                     // bbs 테이블에 데이터 추가
                     String sql = "INSERT INTO bbs VALUES (null, ?, ?, ?, ?, '판매중', NOW(), NOW(), ?)";
                     try (PreparedStatement pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {

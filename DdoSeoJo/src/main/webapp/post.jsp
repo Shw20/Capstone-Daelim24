@@ -15,9 +15,9 @@
     ResultSet rs = null;
 
     try {
-        String url = "jdbc:mysql://localhost:3306/capstone";
+        String url = "jdbc:mysql://localhost:3306/DdoSseoJo";
         String user = "root";
-        String password = "dltmdghks0126";
+        String password = "abcd1234";
         Class.forName("com.mysql.cj.jdbc.Driver");
         conn = DriverManager.getConnection(url, user, password);
     } catch (Exception e) {
@@ -78,7 +78,7 @@
         <p style="margin-right: 20px;"><%= rs.getString("b.content") %></p>
         <%
             // 이미지 표시
-            String imagePath = "image/" + bbsID + "사진.jpg"; // 새로운 이미지 경로 생성
+            String imagePath = "img/" + bbsID + ".jpg"; // 새로운 이미지 경로 생성
         %>
         <img class="img" src="<%= imagePath %>" alt="게시글 이미지">
         

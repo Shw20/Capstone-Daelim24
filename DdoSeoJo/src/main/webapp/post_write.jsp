@@ -27,7 +27,7 @@ function showCategory2() {
             break;
         case "Desktop":
             category2.innerHTML = `
-                <option value="main">컴퓨터</option>
+            	<option value="main">컴퓨터</option>
                 <option value="monitor">모니터</option>
             `;
             showcategory3();
@@ -505,7 +505,7 @@ function showbrand() {
             <label for="fileName">이미지 파일:</label>
             <input type="file" name="fileName">
         </div>
-        <input type="submit" value="등록">
+        <input type="submit" style="background-color: #742121;" value="등록">
     </form>
 </main>
 <footer>

@@ -38,7 +38,7 @@
 <main>
     <div class="board-header">
         <h1>제품 게시판</h1>
-        <a class="write-link" href="post_write.jsp">글쓰기</a>
+        <a class="write-link" style="background-color: #742121;" href="post_write.jsp">글쓰기</a>
     </div>
     <div class="gallery">
         <% 
@@ -55,9 +55,9 @@
             
             try {
                 // 데이터베이스 연결
-                String url = "jdbc:mysql://localhost:3306/capstone";
+                String url = "jdbc:mysql://localhost:3306/DdoSseoJo";
                 String user = "root";
-                String password = "dltmdghks0126";
+                String password = "abcd1234";
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 conn = DriverManager.getConnection(url, user, password);
 
@@ -90,7 +90,7 @@
             <% 
                 // 이미지 표시
                 int bbsID = rs.getInt("bbsID");
-                String imagePath = "image/" + bbsID + "사진.jpg"; // 새로운 이미지 경로 생성
+                String imagePath = "resorces/img/" + bbsID + "사진.jpg"; // 새로운 이미지 경로 생성
             %>
             <div class="gallery-item">
                 <div class="image-container">
