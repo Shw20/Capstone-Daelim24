@@ -10,7 +10,7 @@
     <h1>선택된 카테고리의 상품 목록</h1>
     <div id="productList">
         <% 
-	        String url = "jdbc:mysql://localhost:3306/capstone";
+	        String url = "jdbc:mysql://localhost:3306/DdoSseoJo";
 		    String username = "root";
 		    String password = "abcd1234";
             Connection conn = null;

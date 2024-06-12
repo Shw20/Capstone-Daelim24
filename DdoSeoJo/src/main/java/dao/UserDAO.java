@@ -3,6 +3,7 @@ package dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UserDAO {
@@ -59,6 +60,47 @@ public class UserDAO {
             pstmt.executeUpdate();
             pstmt.close();
             System.out.println("비밀번호 수정 성공");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public boolean checkPassword(int idx, String password) {
+        if (this.conn == null) {
+            System.out.println("데이터베이스 연결이 실패했습니다");
+            return false;
+        }
+
+        String sql = "SELECT Pwd FROM user WHERE IDX = ?";
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, idx);
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                String currentPassword = rs.getString("Pwd");
+                rs.close();
+                pstmt.close();
+                return currentPassword.equals(password);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public void deleteUser(int idx) {
+        if (this.conn == null) {
+            System.out.println("데이터베이스 연결이 실패했습니다");
+            return;
+        }
+
+        String sql = "DELETE FROM user WHERE IDX = ?";
+        try {
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, idx);
+            pstmt.executeUpdate();
+            pstmt.close();
+            System.out.println("회원 탈퇴 성공");
         } catch (SQLException e) {
             e.printStackTrace();
         }

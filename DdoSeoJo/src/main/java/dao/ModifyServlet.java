@@ -32,8 +32,8 @@ public class ModifyServlet extends HttpServlet {
         if (isPasswordCorrect) {
             modifyDao.updatePassword(idx, newPassword);
             modifyDao.close();
-            response.sendRedirect("Main.jsp");
-        } else {
+            response.setContentType("text/html; charset=UTF-8");
+            response.getWriter().println("<script>alert('비밀번호가 변경되었습니다.');location.href='Main.jsp';</script>");
             modifyDao.close();
             response.setContentType("text/html;charset=UTF-8");
             response.getWriter().println("<script>alert('기존 비밀번호가 틀렸습니다.');history.back();</script>");

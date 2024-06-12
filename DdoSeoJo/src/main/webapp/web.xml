@@ -22,7 +22,16 @@
 	    <servlet-name>ModifyServlet</servlet-name>
 	    <url-pattern>/ModifyServlet</url-pattern>
 	</servlet-mapping>
-    
+	
+	<servlet>
+	    <servlet-name>DeleteServlet</servlet-name>
+	    <servlet-class>dao.DeleteServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	    <servlet-name>DeleteServlet</servlet-name>
+	    <url-pattern>/DeleteServlet</url-pattern>
+	</servlet-mapping>
 
     <!-- 기타 설정 등 -->
 

@@ -58,6 +58,7 @@ public class ModifyDAO {
             pstmt.executeUpdate();
             pstmt.close();
             System.out.println("비밀번호 변경 성공");
+            
         } catch (SQLException e) {
             e.printStackTrace();
         }

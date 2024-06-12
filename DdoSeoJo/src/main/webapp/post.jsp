@@ -178,9 +178,9 @@
 		
 		    try {
 		        // 데이터베이스 연결
-		        String url = "jdbc:mysql://localhost:3306/capstone";
+		        String url = "jdbc:mysql://localhost:3306/DdoSseoJo";
 		        String user = "root";
-		        String password = "dltmdghks0126";
+		        String password = "abcd1234";
 		        Class.forName("com.mysql.cj.jdbc.Driver");
 		        conn2 = DriverManager.getConnection(url, user, password);
 		
@@ -222,7 +222,7 @@
 		<%
 		    // 페이지 링크 생성
 		    for (int i = 1; i <= totalPages; i++) {
-		        out.println("<a href=\"post.jsp?bbsID=" + bbsID + "&page=" + i + "\">" + i + "</a>");
+		        out.println("<br /><a href=\"post.jsp?bbsID=" + bbsID + "&page=" + i + "\">" + i + "</a>");
 		    }
 		%>
 		<div class="comment-section">

@@ -42,8 +42,8 @@
                 			//test.jsp 이건 제가 테스트 할라고 만든 파일이고 이건 나중에 수정하면 됨
 %>
                 <script>
-	                alert('로그인 되었습니다.');
-	    			location.href="Main.jsp";	//test.jsp 이건 제가 테스트 할라고 만든 파일이고 이건 나중에 수정하면 됨
+	                alert('비밀번호가 변경 되었습니다.');
+	    			location.href="Modify.jsp";	//test.jsp 이건 제가 테스트 할라고 만든 파일이고 이건 나중에 수정하면 됨
                 </script>
 <%
             } else {
