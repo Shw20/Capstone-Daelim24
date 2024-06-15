@@ -130,73 +130,47 @@
                 </div>
             </div>
             <div class="frame-13">
-                <div class="text-wrapper-20">찜목록</div>
-                <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '${pageContext.request.contextPath}/';">더보기</div>
-                <div class="frame-14">
-                    <div class="frame-15"></div>
-                    <div class="frame-16">
-                        <div class="text-wrapper-22">어쩔티비</div>
-                        <div class="text-wrapper-23">쓰리스타</div>
-                    </div>
-                    <img class="icon-heart-2" src="img/icon-heart.png" />
-                </div>
-                <div class="frame-17">
-                    <div class="frame-18"></div>
-                    <div class="frame-16">
-                        <div class="text-wrapper-22">어쩔티비</div>
-                        <div class="text-wrapper-23">쓰리스타</div>
-                    </div>
-                    <img class="icon-heart-2" src="img/icon-heart-4.png" />
-                </div>
-                <div class="frame-19">
-                    <div class="frame-20"></div>
-                    <div class="frame-16">
-                        <div class="text-wrapper-22">어쩔티비</div>
-                        <div class="text-wrapper-23">쓰리스타</div>
-                    </div>
-                    <img class="icon-heart-2" src="img/icon-heart-3.png" />
-                </div>
-                <div class="frame-21">
-                    <div class="frame-22"></div>
-                    <div class="frame-16">
-                        <div class="text-wrapper-22">어쩔티비</div>
-                        <div class="text-wrapper-23">쓰리스타</div>
-                    </div>
-                    <img class="icon-heart-2" src="img/icon-heart-8.png" />
-                </div>
-                <div class="frame-23">
-                    <div class="frame-24"></div>
-                    <div class="frame-16">
-                        <div class="text-wrapper-22">어쩔티비</div>
-                        <div class="text-wrapper-23">쓰리스타</div>
-                    </div>
-                    <img class="icon-heart-2" src="img/icon-heart-5.png" />
-                </div>
-                <div class="frame-25">
-                    <div class="frame-26"></div>
-                    <div class="frame-16">
-                        <div class="text-wrapper-22">어쩔티비</div>
-                        <div class="text-wrapper-23">쓰리스타</div>
-                    </div>
-                    <img class="icon-heart-2" src="img/icon-heart-9.png" />
-                </div>
-                <div class="frame-27">
-                    <div class="frame-28"></div>
-                    <div class="frame-16">
-                        <div class="text-wrapper-22">어쩔티비</div>
-                        <div class="text-wrapper-23">쓰리스타</div>
-                    </div>
-                    <img class="icon-heart-2" src="img/icon-heart-7.png" />
-                </div>
-                <div class="frame-29">
-                    <div class="frame-30"></div>
-                    <div class="frame-16">
-                        <div class="text-wrapper-22">어쩔티비</div>
-                        <div class="text-wrapper-23">쓰리스타</div>
-                    </div>
-                    <img class="icon-heart-2" src="img/icon-heart-6.png" />
-                </div>
+        <div class="text-wrapper-20">찜목록</div>
+        <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '${pageContext.request.contextPath}/';">더보기</div>
+        <% 
+        try {
+        	Connection conn = null;
+            PreparedStatement pstmt = null;
+            ResultSet rs = null;
+            // 데이터베이스 연결
+            String url = "jdbc:mysql://localhost:3306/capstone";
+            String user = "root";
+            String password = "dltmdghks0126";
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection(url, user, password);
+            // 찜목록 데이터베이스 조회
+            String wishlistSql = "SELECT bbs.bbsID, bbs.Title, bbs.image " +
+                                 "FROM bbs " +
+                                 "JOIN wishlist ON bbs.bbsID = wishlist.bbsID " +
+                                 "WHERE wishlist.userID = ?";
+            pstmt = conn.prepareStatement(wishlistSql);
+            pstmt.setInt(1, IDX); // IDX는 사용자의 고유 번호일 것으로 가정
+            rs = pstmt.executeQuery();
+
+            // 찜목록 출력
+            while(rs.next()) {
+                int bbsID = rs.getInt("bbsID");
+                String imagePath = "image/" + bbsID + "사진.jpg"; // 새로운 이미지 경로 생성
+        %>
+        <div class="frame-14">
+            <div class="frame-15"><img class="icon-heart-2" src="<%= imagePath %>" /></div>
+            <div class="frame-16">
+                <div class="text-wrapper-22"><%= rs.getString("Title") %></div>
             </div>
+            
+        </div>
+        <% 
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        %>
+    </div>
         </div>
     </div>
 </body>

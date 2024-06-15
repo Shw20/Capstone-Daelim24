@@ -73,11 +73,12 @@
                 pstmt.close();
 
                 // 페이지네이션 SQL 쿼리
-                String sql = "SELECT bbs.status, bbs.bbsID, bbs.userID AS userIDX, bbs.CreateTime, bbs.Title, bbs.image, user.UserID " +
-                             "FROM bbs " +
-                             "JOIN user ON bbs.userID = user.IDX " +
-                             "ORDER BY bbs.CreateTime DESC " + // 작성일 기준 내림차순 정렬
-                             "LIMIT ?, ?";
+                String sql = "SELECT bbs.status, bbs.bbsID, bbs.userID AS userIDX, bbs.CreateTime, bbs.Title, bbs.image, user.UserID, wishlist.bbsID AS wishlistBbsID " +
+	                        "FROM bbs " +
+	                        "JOIN user ON bbs.userID = user.IDX " +
+	                        "LEFT JOIN wishlist ON bbs.bbsID = wishlist.bbsID " +
+	                        "ORDER BY bbs.CreateTime DESC " + 
+	                        "LIMIT ?, ?";
                 pstmt = conn.prepareStatement(sql);
                 pstmt.setInt(1, startRecord);
                 pstmt.setInt(2, recordsPerPage);
@@ -90,11 +91,24 @@
             <% 
                 // 이미지 표시
                 int bbsID = rs.getInt("bbsID");
+           		int wishlistBbsID = rs.getInt("wishlistBbsID");
                 String imagePath = "image/" + bbsID + "사진.jpg"; // 새로운 이미지 경로 생성
             %>
             <div class="gallery-item">
                 <div class="image-container">
                     <img class="img" src="<%= imagePath %>" alt="게시글 이미지">
+                    <%
+                    if(wishlistBbsID != bbsID){
+                    %>
+                    <a href="Insert_Wishlist.jsp?bbsID=<%=rs.getInt("bbsID")%>" class="wishlist-icon-insert">★</a>
+                    <% 
+                    }else{
+                    %>
+                    <a href="Delete_Wishlist.jsp?bbsID=<%=rs.getInt("bbsID")%>" class="wishlist-icon-delete">★</a>
+                    <%
+                    }
+                    %>
+                    
                 </div>
                 <div class="info">
                     <span>제목: <%= rs.getString("Title") %></span>

@@ -24,7 +24,7 @@
 		    
 		
 		        if (Name == null) {	%>
-		    		<jsp:include page="resources/layout/nav.jsp"></jsp:include>
+		    		<jsp:include page="/resources/layout/nav.jsp"></jsp:include>
 		<%
 		        }
 		        if (Name != null) {
@@ -32,11 +32,11 @@
 		    <%
 		        	if (Name.equals("관리자")) {
 		    %>
-		            	<jsp:include page="resources/layout/adminNav.jsp"></jsp:include>
+		            	<jsp:include page="/resources/layout/adminNav.jsp"></jsp:include>
 		    <%
 		        	} else {
 		    %>
-		            <jsp:include page="resources/layout/userNav.jsp"></jsp:include>
+		            <jsp:include page="/resources/layout/userNav.jsp"></jsp:include>
 		    <%
 		        	}
 		    	}

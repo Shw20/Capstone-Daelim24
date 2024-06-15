@@ -88,7 +88,7 @@
 
             <%
                 // 세션에 있는 사용자 ID와 게시물을 작성한 사용자 ID 비교
-                if (IDX != null && IDX == postUserIDX) {
+                if (IDX != null && IDX == postUserIDX && UserID.equals("admin")) {
                 	if("판매중".equals(postStatus)){
             %>
 	            <!-- 판매 상태 수정 버튼 -->
@@ -233,7 +233,7 @@
 		    %>
 		    <%
 		        // 댓글 작성자와 세션의 사용자 ID 비교
-		        if (IDX != null && IDX == commentUserID) {
+		        if (IDX != null && IDX == commentUserID && UserID.equals("admin")) {
 		    %>
 		    <div style=" display: flex; justify-content: flex-end;">
 		    	<!-- 댓글 수정 링크 -->

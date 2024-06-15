@@ -640,15 +640,8 @@
 	line-height: normal;
 }
 
-.mypage .frame-13 {
-	position: absolute;
-	width: 1920px;
-	height: 740px;
-	top: 832px;
-	left: 2px;
-}
-
 .mypage .text-wrapper-20 {
+	 margin-top: 850px;
 	position: absolute;
 	width: 86px;
 	height: 38px;
@@ -678,45 +671,53 @@
 	line-height: normal;
 }
 
-.mypage .frame-14 {
-	position: absolute;
-	width: 212px;
-	height: 280px;
-	top: 79px;
-	left: 434px;
+.frame-13 {
+	 margin-top: 850px; /* 위쪽 여백 설정 */
+    padding: 10px; /* 내부 여백 설정 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
-.mypage .frame-15 {
-	position: absolute;
-	width: 211px;
-	height: 211px;
-	top: 0;
-	left: 1px;
-	background-image: url(./img/frame-624749-6.png);
-	background-size: cover;
-	background-position: 50% 50%;
+.frame-14 {
+    position: relative;
+    width: 260px; /* 찜목록 박스 너비 */
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.mypage .frame-16 {
-	position: absolute;
-	width: 178px;
-	height: 60px;
-	top: 215px;
-	left: 0;
+.frame-15 {
+    width: 100%;
+    height: 160px; /* 이미지 높이 조정 */
+    background-size: cover;
+    background-position: center;
 }
 
-.mypage .text-wrapper-22 {
-	position: absolute;
-	width: 71px;
-	height: 22px;
-	top: 5px;
-	left: 0;
-	font-family: "Noto Sans-Medium", Helvetica;
-	font-weight: 500;
-	color: #000000;
-	font-size: 18px;
-	letter-spacing: -0.07px;
-	line-height: normal;
+.frame-16 {
+    padding: 10px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+}
+
+.text-wrapper-22 {
+    font-family: "Noto Sans", Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    margin-top: 10px;
+}
+
+.icon-heart-2 {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 12px;
 }
 
 .mypage .text-wrapper-23 {
@@ -731,14 +732,6 @@
 	font-size: 15px;
 	letter-spacing: -0.07px;
 	line-height: normal;
-}
-
-.mypage .icon-heart-2 {
-	position: absolute;
-	width: 25px;
-	height: 23px;
-	top: 223px;
-	left: 182px;
 }
 
 .mypage .frame-17 {

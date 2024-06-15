@@ -13,7 +13,7 @@ public class UserDAO {
         	Class.forName("com.mysql.jdbc.Driver");
             String url = "jdbc:mysql://localhost:3306/DdoSseoJo?&useSSL=false";
             String username = "root";
-            String password = "abcd1234";
+            String password = "dltmdghks0126";
             conn = DriverManager.getConnection(url, username, password);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
