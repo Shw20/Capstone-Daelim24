@@ -15,9 +15,9 @@
     ResultSet rs = null;
 
     try {
-        String url = "jdbc:mysql://localhost:3306/DdoSseoJo";
+        String url = "jdbc:mysql://localhost:3306/capstone";
         String user = "root";
-        String password = "abcd1234";
+        String password = "dltmdghks0126";
         Class.forName("com.mysql.cj.jdbc.Driver");
         conn = DriverManager.getConnection(url, user, password);
     } catch (Exception e) {
@@ -67,18 +67,17 @@
             if (rs.next()) {
             	String postUserID = rs.getString("u.userID");
                 int postUserIDX = rs.getInt("b.userID");
-                String postStatus = rs.getString("b.status");
     %>
     <h1><%=rs.getString("b.title") %></h1>
     
     <p style="text-align: right;">
-        <strong>작성자:</strong> <%= postUserID %> | <strong>작성일:</strong> <%= rs.getString("b.CreateTime") %> | <strong>판매상태:</strong> <%= rs.getString("b.Status") %>
+        <strong>작성자:</strong> <%= postUserID %> | <strong>작성일:</strong> <%= rs.getString("b.CreateTime") %>
     </p>
     <div class="post-content" style="display: flex; justify-content: space-between;">
         <p style="margin-right: 20px;"><%= rs.getString("b.content") %></p>
         <%
             // 이미지 표시
-            String imagePath = "img/" + bbsID + ".jpg"; // 새로운 이미지 경로 생성
+            String imagePath = "image/" + bbsID + "사진.jpg"; // 새로운 이미지 경로 생성
         %>
         <img class="img" src="<%= imagePath %>" alt="게시글 이미지">
         
@@ -89,40 +88,18 @@
             <%
                 // 세션에 있는 사용자 ID와 게시물을 작성한 사용자 ID 비교
                 if (IDX != null && IDX == postUserIDX) {
-                	if("판매중".equals(postStatus)){
             %>
-	            <!-- 판매 상태 수정 버튼 -->
-	            <form method="post" action="status_update.jsp">
-	            	<input type="hidden" name="bbsID" value="<%= bbsID %>">
-	            	<input type="submit" value="판매완료" class="Status">
-	            </form>
-	            <!-- 수정 버튼 -->
-	            <form method="post" action="update_post.jsp">
-	                <input type="hidden" name="bbsID" value="<%= bbsID %>">
-	                <input type="submit" value="수정">
-	            </form>
-	            <!-- 삭제 버튼 -->
-	            <form method="post" action="delete_post.jsp">
-	                <input type="hidden" name="bbsID" value="<%= bbsID %>">
-	                <input type="submit" value="삭제" class="delete">        
-	            </form>
-	        <%
-            
-                	} else{
-            %>
-                <!-- 수정 버튼 -->
-	            <form method="post" action="update_post.jsp">
-	                <input type="hidden" name="bbsID" value="<%= bbsID %>">
-	                <input type="submit" value="수정">
-	            </form>
-	            <!-- 삭제 버튼 -->
-	            <form method="post" action="delete_post.jsp">
-	                <input type="hidden" name="bbsID" value="<%= bbsID %>">
-	                <input type="submit" value="삭제" class="delete">        
-	            </form>
-            
+            <!-- 수정 버튼 -->
+            <form method="post" action="update_post.jsp">
+                <input type="hidden" name="bbsID" value="<%= bbsID %>">
+                <input type="submit" value="수정">
+            </form>
+            <!-- 삭제 버튼 -->
+            <form method="post" action="delete_post.jsp">
+                <input type="hidden" name="bbsID" value="<%= bbsID %>">
+                <input type="submit" value="삭제" class="delete">        
+            </form>
             <%
-                	}
                 }
             %>
         </div>
@@ -178,9 +155,9 @@
 		
 		    try {
 		        // 데이터베이스 연결
-		        String url = "jdbc:mysql://localhost:3306/DdoSseoJo";
+		        String url = "jdbc:mysql://localhost:3306/capstone";
 		        String user = "root";
-		        String password = "abcd1234";
+		        String password = "dltmdghks0126";
 		        Class.forName("com.mysql.cj.jdbc.Driver");
 		        conn2 = DriverManager.getConnection(url, user, password);
 		
@@ -205,11 +182,11 @@
 		
 		        // SQL 쿼리 실행
 		        String sql2 = "SELECT c.*, u.userID " +
-		           	   	      "FROM comment c " +
-		                	  "JOIN user u ON c.userID = u.IDX " +
-		                	  "WHERE c.bbsID = ? " +
-		                	  "ORDER BY c.CreateTime ASC " +
-		                	  "LIMIT ?, ?";
+		                "FROM comment c " +
+		                "JOIN user u ON c.userID = u.IDX " +
+		                "WHERE c.bbsID = ? " +
+		                "ORDER BY c.CreateTime ASC " +
+		                "LIMIT ?, ?";
 		        pstmt2 = conn2.prepareStatement(sql2);
 		        pstmt2.setInt(1, bbsID);
 		        pstmt2.setInt(2, (currentPage - 1) * commentsPerPage);
@@ -222,7 +199,7 @@
 		<%
 		    // 페이지 링크 생성
 		    for (int i = 1; i <= totalPages; i++) {
-		        out.println("<br /><a href=\"post.jsp?bbsID=" + bbsID + "&page=" + i + "\">" + i + "</a>");
+		        out.println("<a href=\"post.jsp?bbsID=" + bbsID + "&page=" + i + "\">" + i + "</a>");
 		    }
 		%>
 		<div class="comment-section">

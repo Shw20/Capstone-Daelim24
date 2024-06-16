@@ -15,11 +15,18 @@ main {
     max-width: 1000px;
     width: 100%;
     margin: 20px;
+<<<<<<< HEAD
     margin-top: 100px;
     padding: 20px;
     /* background-color: #ffffff; */
     border-radius: 8px;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+=======
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+>>>>>>> branch 'main' of https://github.com/Shw20/Capstone-Daelim24.git
 }
 
 h1 {

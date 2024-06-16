@@ -52,7 +52,11 @@
                                     <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">브랜드관</div>
                                     <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '${pageContext.request.contextPath}/bbs_List.jsp';">제품</div>
                                     <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">핫딜</div>
+<<<<<<< HEAD
                                     <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">부품</div>
+=======
+                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">부품구매?</div>
+>>>>>>> branch 'main' of https://github.com/Shw20/Capstone-Daelim24.git
                                 </div>
                             </div>
                         </div>

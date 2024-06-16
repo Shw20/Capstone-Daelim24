@@ -1,111 +1,87 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="resources/css/Modify.css" />
-    <link rel="stylesheet" href="resources/css/footer.css" />
-    <script src="resources/js/script.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <nav>
-        <%@ include file="resources/layout/userNav.jsp"%>
-    </nav>
-    <form name="Modify" action="ModifyServlet" method="post" onsubmit="return validateForm()">
-        <div class="signup">
-            <div class="div" style="margin-top: 100px;">
-                <div class="overlap">
-                    <div class="overlap-2"></div>
-                    <div class="overlap-3" style="position: relative; display: inline-block;">
-                        <div class="text-wrapper-12" style="background-color: transparent; cursor: pointer;">수정하기</div>
-                        <input type="submit" value="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;">
-                    </div>
-                    <div class="overlap-4">
-                        <p class="div-2">
-                            <span class="text-wrapper-14" style="background-color: transparent; cursor: pointer; text-align: center;" onclick="openModal()">탈퇴하기</span>
-                        </p>
-                    </div>
-                    <div class="overlap-5">
-                        <div class="text-wrapper-10">
-                            <input type="password" id="currentPassword" name="currentPassword" placeholder="기존 비밀번호" autocomplete="off" class="input-id" required>
-                        </div>
-                    </div>
-                    <div class="overlap-6">
-                        <div class="text-wrapper-10">
-                            <input type="password" placeholder="새 비밀번호 (영문+숫자 8자 이상)" autocomplete="off" maxlength="16" class="input-pwd" id="newPassword" name="newPassword" required>
-                        </div>
-                    </div>
-                    <div class="overlap-7">
-                        <div class="text-wrapper-10">
-                            <input type="password" placeholder="새 비밀번호 확인" autocomplete="off" maxlength="16" class="input-pwd" id="confirmPassword" name="confirmPassword" onkeyup="checkPasswordMatch();" required>
-                            <div id="passwordMatchMessage"></div>
-                        </div>
-                    </div>
-                    <div class="text-wrapper-15">전부 필수 입력 항목입니다</div>
-                </div>
-                <div class="text-wrapper-17" style="cursor: pointer;">회원정보 수정</div>
-            </div>
-        </div>
-    </form>
+<%@ page import="java.sql.*" %>
+<%@ page import="java.sql.DriverManager"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.io.*,java.sql.*" %>
+<%@ page import="javax.servlet.*,javax.servlet.http.*" %>
+<%@ page import="javax.servlet.http.*" %>
+<%
+    String userID = request.getParameter("userID");			//login 페이지에서 입력한 아이디 받아오기
+    String password = request.getParameter("password");		//login 페이지에서 입력한 비밀번호 받아오기
 
-    <!-- 비밀번호 입력 모달 -->
-    <div id="passwordModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>비밀번호 확인</h2>
-            <form id="deleteForm" action="${pageContext.request.contextPath}/DeleteServlet" method="post">
-                <label for="password">비밀번호:</label>
-                <input type="password" id="password" name="password" required>
-                <br>
-                <button type="button" onclick="submitForm()">탈퇴하기</button>
-            </form>
-        </div>
-    </div>
+    Connection con = null;
+    PreparedStatement pstmt = null;
+    ResultSet rs = null;
 
-    <script>
-        function checkPasswordMatch() {
-            var password = document.getElementById("newPassword").value;
-            var confirmPassword = document.getElementById("confirmPassword").value;
-            var message = document.getElementById("passwordMatchMessage");
+    String url = "jdbc:mysql://localhost:3306/DdoSseoJo";
+    String dbUserName = "root";
+    String dbPassword = "abcd1234";
 
-            if (password != confirmPassword) {
-                message.style.color = "red";
-                message.innerHTML = "비밀번호가 일치하지 않습니다.";
+    try {
+        Class.forName("com.mysql.jdbc.Driver");			// JDBC Driver 로드
+        con = DriverManager.getConnection(url, dbUserName, dbPassword);        // drivermanager로 db 접속
+        
+        String sql = "SELECT * FROM user WHERE UserID = ?";			// 쿼리문 입력
+        pstmt = con.prepareStatement(sql);			// PreparedStatement 객체 생성
+        pstmt.setString(1, userID);
+        // PreparedStatement에 값 설정
+        rs = pstmt.executeQuery();			// 쿼리실행
+    
+        // user에 존재하는지 확인 (userID)
+        if (rs.next()) {
+            // 아이디가 존재하는 경우
+            String userPwd = rs.getString("Pwd");		//userPwd라는 객체를 새로 생성하고 db에 있는 Pwd를 끌고와서 비교
+            if (password.equals(userPwd)) {
+                // 비밀번호 일치
+                session.setAttribute("IDX", rs.getInt("IDX"));
+	            session.setAttribute("UserID", rs.getString("UserID"));
+	            session.setAttribute("Name", rs.getString("Name"));
+	            
+                // 메인 페이지에 세션부여
+                			//test.jsp 이건 제가 테스트 할라고 만든 파일이고 이건 나중에 수정하면 됨
+%>
+                <script>
+	                alert('로그인 되었습니다.');
+	    			location.href="Main.jsp";	//test.jsp 이건 제가 테스트 할라고 만든 파일이고 이건 나중에 수정하면 됨
+                </script>
+<%
             } else {
-                message.style.color = "green";
-                message.innerHTML = "비밀번호가 일치합니다.";
+                // 비밀번호 불일치
+%>
+                <script>
+                    alert("비밀번호가 잘못되었습니다.");
+                    window.location.href = "Login.jsp";			//test.jsp 이건 제가 테스트 할라고 만든 파일이고 이건 나중에 수정하면 됨
+                </script>
+<%
             }
+        } else {
+            // 아이디가 존재하지 않는 경우
+%>
+            <script>
+                alert("아이디가 잘못되었습니다.");
+                window.location.href = "Login.jsp";			//test.jsp 이건 제가 테스트 할라고 만든 파일이고 이건 나중에 수정하면 됨
+            </script>
+<%
         }
 
-        function validateForm() {
-            var password = document.getElementById("newPassword").value;
-            var confirmPassword = document.getElementById("confirmPassword").value;
-            if (password != confirmPassword) {
-                alert("비밀번호가 일치하지 않습니다.");
-                return false;
-            }
-            return true;
+    } catch (ClassNotFoundException e) {
+        // JDBC 커넥터 오류
+        out.println("JDBC driver not found: " + e.getMessage());
+        e.printStackTrace();
+    } catch (SQLException e) {
+        // SQL 쿼리문 오류
+        out.println("SQL Error: " + e.getMessage());
+        e.printStackTrace();
+    } catch (Exception e) {
+        out.println("Error: " + e.getMessage());
+        e.printStackTrace();
+    } finally {
+        // 리소스 닫기
+        try {
+            if (rs != null) rs.close();
+            if (pstmt != null) pstmt.close();
+            if (con != null) con.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-
-        function openModal() {
-            document.getElementById("passwordModal").style.display = "block";
-        }
-
-        function closeModal() {
-            document.getElementById("passwordModal").style.display = "none";
-        }
-
-        function submitForm() {
-            var password = document.getElementById("password").value;
-            if (password === "") {
-                alert("비밀번호를 입력해주세요.");
-                return false;
-            }
-            document.getElementById("deleteForm").submit();
-        }
-    </script>
-</body>
-<!-- <footer>
-    <%@ include file="resources/layout/footer.jsp"%>
-</footer> -->
-</html>
+    }
+%>

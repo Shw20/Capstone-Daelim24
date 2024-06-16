@@ -6,7 +6,11 @@
 <meta charset="UTF-8">
 <title></title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<<<<<<< HEAD
 <!-- <link rel="stylesheet" href="resources/css/SignStyle.css"/> -->
+=======
+<link rel="stylesheet" href="resources/css/SignStyle.css"/>
+>>>>>>> branch 'main' of https://github.com/Shw20/Capstone-Daelim24.git
 <link rel="stylesheet" href="resources/css/Search.css"/>
 <script src="resources/js/script.js"></script>
 </head>

@@ -15,9 +15,9 @@
 
         try {
             // 데이터베이스 연결
-            String url = "jdbc:mysql://localhost:3306/DdoSseoJo";
+            String url = "jdbc:mysql://localhost:3306/capstone";
             String user = "root";
-            String password = "abcd1234";
+            String password = "dltmdghks0126";
             Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection(url, user, password);
 

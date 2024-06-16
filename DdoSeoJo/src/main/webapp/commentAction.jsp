@@ -30,9 +30,9 @@
 	if(userID != null){
 	    if (bbsID != null && !bbsID.isEmpty() && content != null && !content.isEmpty()) {
 	        try {
-	            String url = "jdbc:mysql://localhost:3306/DdoSseoJo";
+	            String url = "jdbc:mysql://localhost:3306/capstone";
 	            String dbUser = "root";
-	            String password = "abcd1234";
+	            String password = "dltmdghks0126";
 	            Class.forName("com.mysql.cj.jdbc.Driver");
 	            conn = DriverManager.getConnection(url, dbUser, password);
 	

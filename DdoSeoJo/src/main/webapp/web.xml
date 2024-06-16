@@ -13,6 +13,7 @@
         <servlet-name>JoinServlet</servlet-name>
         <url-pattern>/JoinServlet</url-pattern>
     </servlet-mapping>
+<<<<<<< HEAD
     
     <servlet>
 	    <servlet-name>ModifyServlet</servlet-name>
@@ -32,6 +33,8 @@
 	    <servlet-name>DeleteServlet</servlet-name>
 	    <url-pattern>/DeleteServlet</url-pattern>
 	</servlet-mapping>
+=======
+>>>>>>> branch 'main' of https://github.com/Shw20/Capstone-Daelim24.git
 
     <!-- 기타 설정 등 -->
 

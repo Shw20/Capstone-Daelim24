@@ -64,6 +64,7 @@ function JoinForm(){ /* 회원가입 유효성검사 */
 		}
 	}*/
 	
+<<<<<<< HEAD
 	function checkPasswordMatch() { //회원가입 비밀번호가 일치한지
         var password = document.getElementById("password").value;
         var confirmPassword = document.getElementById("confirmPassword").value;
@@ -78,6 +79,21 @@ function JoinForm(){ /* 회원가입 유효성검사 */
         }
     }
     
+=======
+	function checkPasswordMatch() { //비밀번호가 일치한지
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+        var message = document.getElementById("passwordMatchMessage");
+
+        if (password != confirmPassword) {
+            message.innerHTML = "비밀번호가 일치하지 않습니다.";
+            message.style.color = "red";
+        } else {
+            message.innerHTML = "비밀번호가 일치합니다.";
+            message.style.color = "green";
+        }
+    }
+>>>>>>> branch 'main' of https://github.com/Shw20/Capstone-Daelim24.git
     
  document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.overlap-3').addEventListener('click', function() {
