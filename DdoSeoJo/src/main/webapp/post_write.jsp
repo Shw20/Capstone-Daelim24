@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="resources/css/footerStyle.css">
 <link rel="stylesheet" href="resources/css/postWrite.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
 <script>
 function showCategory2() {
     var category1 = document.getElementById("category1").value;
@@ -507,16 +506,15 @@ function showbrand() {
             <input type="file" name="fileName">
         </div>
         <input type="submit" style="background-color: #742121;" value="등록">
-=======
 </head>
 <header>
         <%
-		    request.setCharacterEncoding("UTF8");
-		    response.setCharacterEncoding("UTF-8");
-		    
-		    Integer IDX = (Integer) session.getAttribute("IDX");
-		    String UserID = (String) session.getAttribute("UserID");
-		    String Name = (String) session.getAttribute("Name");
+	        request.setCharacterEncoding("UTF8");
+	        response.setCharacterEncoding("UTF-8");
+	        
+	        /* Integer IDX = (Integer) session.getAttribute("IDX");
+	        String UserID = (String) session.getAttribute("UserID");
+	        String Name = (String) session.getAttribute("Name"); */
 		
 		        if (Name == null) {	
 		%>
@@ -557,7 +555,6 @@ function showbrand() {
         </div>
         <input type="file" name="fileName">
         <input type="submit" value="등록">
->>>>>>> branch 'main' of https://github.com/Shw20/Capstone-Daelim24.git
     </form>
 </main>
 <footer>
