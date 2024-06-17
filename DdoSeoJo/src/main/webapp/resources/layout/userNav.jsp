@@ -49,8 +49,8 @@
                                     <div class="text-wrapper-20" style="cursor: pointer;" onclick="window.location.href = '${pageContext.request.contextPath}/LogoutDAO.jsp';">로그아웃</div>
                                 </div>
                                 <div class="frame-2">
-                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">브랜드관</div>
-                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '${pageContext.request.contextPath}/bbs_List.jsp';">제품</div>
+                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">브랜드</div>
+                                    <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '${pageContext.request.contextPath}/bbs_List.jsp';">판매게시판</div>
                                     <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">핫딜</div>
                                     <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '';">부품</div>
                                 </div>

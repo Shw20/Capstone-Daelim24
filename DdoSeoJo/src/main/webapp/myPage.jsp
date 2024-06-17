@@ -131,7 +131,7 @@
             </div>
             <div class="frame-13">
         <div class="text-wrapper-20">찜목록</div>
-        <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '${pageContext.request.contextPath}/';">더보기</div>
+        <%-- <div class="text-wrapper-21" style="cursor: pointer;" onclick="location.href = '${pageContext.request.contextPath}/';">더보기</div> --%>
         <% 
         try {
         	Connection conn = null;
