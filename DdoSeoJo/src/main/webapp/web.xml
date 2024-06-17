@@ -32,6 +32,14 @@
 	    <servlet-name>DeleteServlet</servlet-name>
 	    <url-pattern>/DeleteServlet</url-pattern>
 	</servlet-mapping>
+	<servlet>
+        <servlet-name>ToggleWishlist</servlet-name>
+        <servlet-class>dao.ToggleWishlist</servlet-class>
+    </servlet>
+	<servlet-mapping>
+        <servlet-name>ToggleWishlist</servlet-name>
+        <url-pattern>/toggleWishlist</url-pattern>
+    </servlet-mapping>
 
     <!-- 기타 설정 등 -->
 

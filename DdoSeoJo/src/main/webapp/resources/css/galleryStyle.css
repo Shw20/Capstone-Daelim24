@@ -130,3 +130,31 @@
 .pagination span {
     background-color: #6c757d;
 }
+
+.wishlist-icon-insert { 
+    font-size: 50px;
+    color: white; 
+    position: absolute;
+    top: 0px;
+    right: 10px; 
+    z-index: 1; 
+    cursor: pointer; 
+}
+
+.wishlist-icon-insert:hover{
+    transform: scale(1.5);
+}
+
+.wishlist-icon-delete { 
+    font-size: 50px;
+    color: gold; 
+    position: absolute;
+    top: 0px;
+    right: 10px; 
+    z-index: 1; 
+    cursor: pointer; 
+}
+
+.wishlist-icon-delete:hover{
+    transform: scale(1.5);
+}
