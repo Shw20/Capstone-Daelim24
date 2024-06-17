@@ -59,7 +59,7 @@
             // 데이터베이스 연결 정보
             String url = "jdbc:mysql://localhost:3306/Capstone";
             String username = "root";
-            String password = "208510";
+            String password = "1234";
             Connection conn = null;
             PreparedStatement stmt = null;
             ResultSet rs = null;
