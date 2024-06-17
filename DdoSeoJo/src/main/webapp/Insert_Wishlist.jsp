@@ -18,9 +18,9 @@
     Connection con = null;
     PreparedStatement pstmt = null;
     
-    String url = "jdbc:mysql://localhost:3306/capstone";
+    String url = "jdbc:mysql://localhost:3306/DdoSseoJo";
     String dbUserName = "root";
-    String dbPassword = "dltmdghks0126";
+    String dbPassword = "abcd1234";
     
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");

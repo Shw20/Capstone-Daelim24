@@ -147,8 +147,8 @@
           category4.classList.remove('hidden');
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="뷰소닉"><div class="brandListWrap"><img src="./imgs/viewsonic.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">뷰소닉</p></div></li>'+
-          '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
+          '<li data-type="뷰소닉"><div class="brandListWrap"><img src="./img/viewsonic.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">뷰소닉</p></div></li>'+
+          '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
         }
 
         if(selectedTypeCI === 'refrigerator'){
@@ -235,70 +235,70 @@
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
           '<li data-type="APPLE"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1209.svg" alt=""><p class="brandListName">애플</p></div></li>'+
-          '<li data-type="LENOVO"><div class="brandListWrap"><img src="./imgs/lenovo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">레노버</p></div></li>'+
-          '<li data-type="HP"><div class="brandListWrap"><img src="./imgs/hp.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">HP</p></div></li>'
+          '<li data-type="LENOVO"><div class="brandListWrap"><img src="./img/lenovo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">레노버</p></div></li>'+
+          '<li data-type="HP"><div class="brandListWrap"><img src="./img/hp.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">HP</p></div></li>'
         }
         if(selectedOption === 'gamming'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
-          '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li><li data-type="Lenovo"><div class="brandListWrap"><img src="./imgs/lenovo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">레노버</p></div></li>'+
-          '<li data-type="HP"><div class="brandListWrap"><img src="./imgs/hp.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">HP</p></div></li>'
+          '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li><li data-type="Lenovo"><div class="brandListWrap"><img src="./img/lenovo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">레노버</p></div></li>'+
+          '<li data-type="HP"><div class="brandListWrap"><img src="./img/hp.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">HP</p></div></li>'
         }
         if(selectedOption === 'laptopall'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
           '<li data-type="APPLE"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1209.svg" alt=""><p class="brandListName">애플</p></div></li>'+
-          '<li data-type="LENOVO"><div class="brandListWrap"><img src="./imgs/lenovo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">레노버</p></div></li>'+
-          '<li data-type="HP"><div class="brandListWrap"><img src="./imgs/hp.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">HP</p></div></li>'
+          '<li data-type="LENOVO"><div class="brandListWrap"><img src="./img/lenovo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">레노버</p></div></li>'+
+          '<li data-type="HP"><div class="brandListWrap"><img src="./img/hp.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">HP</p></div></li>'
         }
         // 노트북
 
         // 주변기기
         if(selectedOption === 'mouse'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
-          '<li data-type="로지텍"><div class="brandListWrap"><img src="./imgs/logitech.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">로지텍</p></div></li>'+
-          '<li data-type="asus"><div class="brandListWrap"><img src="./imgs/asus.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">ASUS</p></div></li>'+
-          '<li data-type="앱코"><div class="brandListWrap"><img src="./imgs/abko.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">앱코</p></div></li>'+
-          '<li data-type="britz"><div class="brandListWrap"><img src="./imgs/britz.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">브리츠</p></div></li>'
+          '<li data-type="로지텍"><div class="brandListWrap"><img src="./img/logitech.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">로지텍</p></div></li>'+
+          '<li data-type="asus"><div class="brandListWrap"><img src="./img/asus.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">ASUS</p></div></li>'+
+          '<li data-type="앱코"><div class="brandListWrap"><img src="./img/abko.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">앱코</p></div></li>'+
+          '<li data-type="britz"><div class="brandListWrap"><img src="./img/britz.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">브리츠</p></div></li>'
         }
         if(selectedOption === 'keyboard'){
-          brandList.innerHTML = '<li data-type="로지텍"><div class="brandListWrap"><img src="./imgs/logitech.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">로지텍</p></div></li>'+
-          '<li data-type="asus"><div class="brandListWrap"><img src="./imgs/asus.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">ASUS</p></div></li>'+
-          '<li data-type="앱코"><div class="brandListWrap"><img src="./imgs/abko.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">앱코</p></div></li>'+
-          '<li data-type="알파스캔"><div class="brandListWrap"><img src="./imgs/alphascan.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">알파스캔</p></div></li>'
+          brandList.innerHTML = '<li data-type="로지텍"><div class="brandListWrap"><img src="./img/logitech.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">로지텍</p></div></li>'+
+          '<li data-type="asus"><div class="brandListWrap"><img src="./img/asus.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">ASUS</p></div></li>'+
+          '<li data-type="앱코"><div class="brandListWrap"><img src="./img/abko.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">앱코</p></div></li>'+
+          '<li data-type="알파스캔"><div class="brandListWrap"><img src="./img/alphascan.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">알파스캔</p></div></li>'
         }
         if(selectedOption === 'headset'){
-          brandList.innerHTML = '<li data-type="sony"><div class="brandListWrap"><img src="./imgs/sony.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">소니</p></div></li>'+
-          '<li data-type="jbl"><div class="brandListWrap"><img src="./imgs/jbl.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">JBL</p></div></li>'+
-          '<li data-type="akg"><div class="brandListWrap"><img src="./imgs/akg.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">AKG</p></div></li>'+
-          '<li data-type="젠하이저"><div class="brandListWrap"><img src="./imgs/sennheiser.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">젠하이저</p></div></li>'+
-          '<li data-type="슈어"><div class="brandListWrap"><img src="./imgs/shure.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">슈어</p></div></li>'
+          brandList.innerHTML = '<li data-type="sony"><div class="brandListWrap"><img src="./img/sony.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">소니</p></div></li>'+
+          '<li data-type="jbl"><div class="brandListWrap"><img src="./img/jbl.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">JBL</p></div></li>'+
+          '<li data-type="akg"><div class="brandListWrap"><img src="./img/akg.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">AKG</p></div></li>'+
+          '<li data-type="젠하이저"><div class="brandListWrap"><img src="./img/sennheiser.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">젠하이저</p></div></li>'+
+          '<li data-type="슈어"><div class="brandListWrap"><img src="./img/shure.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">슈어</p></div></li>'
         }
         if(selectedOption === 'microphone'){
-          brandList.innerHTML = '<li data-type="akg"><div class="brandListWrap"><img src="./imgs/akg.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">AKG</p></div></li>'+
-          '<li data-type="젠하이저"><div class="brandListWrap"><img src="./imgs/sennheiser.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">젠하이저</p></div></li>'+
-          '<li data-type="앱코"><div class="brandListWrap"><img src="./imgs/abko.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">앱코</p></div></li>'+
-          '<li data-type="britz"><div class="brandListWrap"><img src="./imgs/britz.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">브리츠</p></div></li>'
+          brandList.innerHTML = '<li data-type="akg"><div class="brandListWrap"><img src="./img/akg.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">AKG</p></div></li>'+
+          '<li data-type="젠하이저"><div class="brandListWrap"><img src="./img/sennheiser.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">젠하이저</p></div></li>'+
+          '<li data-type="앱코"><div class="brandListWrap"><img src="./img/abko.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">앱코</p></div></li>'+
+          '<li data-type="britz"><div class="brandListWrap"><img src="./img/britz.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">브리츠</p></div></li>'
         }
         // 주변기기
         
         // 모니터
         if(selectedOption === '24인치'){
           brandList.innerHTML = '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="asus"><div class="brandListWrap"><img src="./imgs/asus.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">ASUS</p></div></li>'+
-          '<li data-type="뷰소닉"><div class="brandListWrap"><img src="./imgs/viewsonic.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">뷰소닉</p></div></li>'
+          '<li data-type="asus"><div class="brandListWrap"><img src="./img/asus.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">ASUS</p></div></li>'+
+          '<li data-type="뷰소닉"><div class="brandListWrap"><img src="./img/viewsonic.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">뷰소닉</p></div></li>'
         }
         if(selectedOption === '27인치'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="asus"><div class="brandListWrap"><img src="./imgs/asus.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">ASUS</p></div></li>'+
-          '<li data-type="뷰소닉"><div class="brandListWrap"><img src="./imgs/viewsonic.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">뷰소닉</p></div></li>'
+          '<li data-type="asus"><div class="brandListWrap"><img src="./img/asus.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">ASUS</p></div></li>'+
+          '<li data-type="뷰소닉"><div class="brandListWrap"><img src="./img/viewsonic.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">뷰소닉</p></div></li>'
         }
         if(selectedOption === '32인치'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="ASUS"><div class="brandListWrap"><img src="./imgs/asus.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">ASUS</p></div></li>'+
-          '<li data-type="뷰소닉"><div class="brandListWrap"><img src="./imgs/viewsonic.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">뷰소닉</p></div></li>'+
-          '<li data-type="알파스캔"><div class="brandListWrap"><img src="./imgs/alphascan.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">알파스캔</p></div></li>'
+          '<li data-type="ASUS"><div class="brandListWrap"><img src="./img/asus.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">ASUS</p></div></li>'+
+          '<li data-type="뷰소닉"><div class="brandListWrap"><img src="./img/viewsonic.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">뷰소닉</p></div></li>'+
+          '<li data-type="알파스캔"><div class="brandListWrap"><img src="./img/alphascan.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">알파스캔</p></div></li>'
         }
         if(selectedOption === '32up'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'
@@ -306,9 +306,9 @@
         if(selectedOption === 'monitorall'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="asus"><div class="brandListWrap"><img src="./imgs/asus.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">ASUS</p></div></li>'+
-          '<li data-type="뷰소닉"><div class="brandListWrap"><img src="./imgs/viewsonic.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">뷰소닉</p></div></li>'+
-          '<li data-type="알파스캔"><div class="brandListWrap"><img src="./imgs/alphascan.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">알파스캔</p></div></li>'
+          '<li data-type="asus"><div class="brandListWrap"><img src="./img/asus.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">ASUS</p></div></li>'+
+          '<li data-type="뷰소닉"><div class="brandListWrap"><img src="./img/viewsonic.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">뷰소닉</p></div></li>'+
+          '<li data-type="알파스캔"><div class="brandListWrap"><img src="./img/alphascan.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">알파스캔</p></div></li>'
         }
         // 모니터
 
@@ -316,7 +316,7 @@
         if(selectedOption === '8인치'){
           brandList.innerHTML = '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
           '<li data-type="APPLE"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1209.svg" alt=""><p class="brandListName">애플</p></div></li>'+
-          '<li data-type="LENOVO"><div class="brandListWrap"><img src="./imgs/lenovo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">레노버</p></div></li>'
+          '<li data-type="LENOVO"><div class="brandListWrap"><img src="./img/lenovo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">레노버</p></div></li>'
         }
         if(selectedOption === '10인치'){
           brandList.innerHTML = '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
@@ -325,20 +325,20 @@
         if(selectedOption === '11인치'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="APPLE"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1209.svg" alt=""><p class="brandListName">애플</p></div></li>'+
-          '<li data-type="LENOVO"><div class="brandListWrap"><img src="./imgs/lenovo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">레노버</p></div></li>'+
-          '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
+          '<li data-type="LENOVO"><div class="brandListWrap"><img src="./img/lenovo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">레노버</p></div></li>'+
+          '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
         }
         if(selectedOption === '12인치'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
-          '<li data-type="LENOVO"><div class="brandListWrap"><img src="./imgs/lenovo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">레노버</p></div></li>'+
-          '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
+          '<li data-type="LENOVO"><div class="brandListWrap"><img src="./img/lenovo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">레노버</p></div></li>'+
+          '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
         }
         if(selectedOption === 'tabletall'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
           '<li data-type="APPLE"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1209.svg" alt=""><p class="brandListName">애플</p></div></li>'+
-          '<li data-type="LENOVO"><div class="brandListWrap"><img src="./imgs/lenovo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">레노버</p></div></li>'+
-          '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
+          '<li data-type="LENOVO"><div class="brandListWrap"><img src="./img/lenovo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">레노버</p></div></li>'+
+          '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
         }
         // 테블릿
 
@@ -356,41 +356,41 @@
         if(selectedOption === '4050'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
+          '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
         }
         if(selectedOption === '5060'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
+          '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
         }
         if(selectedOption === '6070'){
           brandList.innerHTML = '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
+          '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
         }
         if(selectedOption === '7080'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
-          '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
+          '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
         }
         if(selectedOption === '80up'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
+          '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
         }
         if(selectedOption === 'tvall'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
+          '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
         }
 
         // 냉장고
         if(selectedOption === '1도어'){
-          brandList.innerHTML = '<li data-type="위니아"><div class="brandListWrap"><img src="./imgs/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
+          brandList.innerHTML = '<li data-type="위니아"><div class="brandListWrap"><img src="./img/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
         }
         if(selectedOption === '2도어'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="캐리어"><div class="brandListWrap"><img src="./imgs/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
-          '<li data-type="위니아"><div class="brandListWrap"><img src="./imgs/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
+          '<li data-type="캐리어"><div class="brandListWrap"><img src="./img/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
+          '<li data-type="위니아"><div class="brandListWrap"><img src="./img/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
         }
         if(selectedOption === '4도어'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
@@ -399,8 +399,8 @@
         if(selectedOption === 'refall'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="캐리어"><div class="brandListWrap"><img src="./imgs/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
-          '<li data-type="위니아"><div class="brandListWrap"><img src="./imgs/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
+          '<li data-type="캐리어"><div class="brandListWrap"><img src="./img/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
+          '<li data-type="위니아"><div class="brandListWrap"><img src="./img/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
         }
         // 냉장고
 
@@ -408,33 +408,33 @@
         if(selectedOption === '드럼'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="캐리어"><div class="brandListWrap"><img src="./imgs/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
-          '<li data-type="위니아"><div class="brandListWrap"><img src="./imgs/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
+          '<li data-type="캐리어"><div class="brandListWrap"><img src="./img/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
+          '<li data-type="위니아"><div class="brandListWrap"><img src="./img/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
         }
         if(selectedOption === '일반'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="캐리어"><div class="brandListWrap"><img src="./imgs/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
-          '<li data-type="위니아"><div class="brandListWrap"><img src="./imgs/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
+          '<li data-type="캐리어"><div class="brandListWrap"><img src="./img/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
+          '<li data-type="위니아"><div class="brandListWrap"><img src="./img/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
         }
         if(selectedOption === 'washall'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="캐리어"><div class="brandListWrap"><img src="./imgs/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
-          '<li data-type="위니아"><div class="brandListWrap"><img src="./imgs/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
+          '<li data-type="캐리어"><div class="brandListWrap"><img src="./img/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
+          '<li data-type="위니아"><div class="brandListWrap"><img src="./img/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
         }
         // 세탁기
 
         // 건조기
         if(selectedOption === '소형'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
-          '<li data-type="캐리어"><div class="brandListWrap"><img src="./imgs/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
-          '<li data-type="린나이"><div class="brandListWrap"><img src="./imgs/rinnai.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">린나이</p></div></li>'+
-          '<li data-type="위니아"><div class="brandListWrap"><img src="./imgs/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
+          '<li data-type="캐리어"><div class="brandListWrap"><img src="./img/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
+          '<li data-type="린나이"><div class="brandListWrap"><img src="./img/rinnai.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">린나이</p></div></li>'+
+          '<li data-type="위니아"><div class="brandListWrap"><img src="./img/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
         }
         if(selectedOption === '중형'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
-          '<li data-type="위니아"><div class="brandListWrap"><img src="./imgs/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
+          '<li data-type="위니아"><div class="brandListWrap"><img src="./img/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
         }
         if(selectedOption === '대형'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
@@ -443,8 +443,8 @@
         if(selectedOption === 'dryall'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="린나이"><div class="brandListWrap"><img src="./imgs/rinnai.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">린나이</p></div></li>'+
-          '<li data-type="위니아"><div class="brandListWrap"><img src="./imgs/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
+          '<li data-type="린나이"><div class="brandListWrap"><img src="./img/rinnai.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">린나이</p></div></li>'+
+          '<li data-type="위니아"><div class="brandListWrap"><img src="./img/winia.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위니아</p></div></li>'
         }
         // 건조기
 
@@ -452,10 +452,10 @@
         if(selectedOption === '18down'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
+          '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
         }
         if(selectedOption === '25평형'){
-          brandList.innerHTML = '<li data-type="다이슨"><div class="brandListWrap"><img src="./imgs/dyson.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">다이슨</p></div></li>'
+          brandList.innerHTML = '<li data-type="다이슨"><div class="brandListWrap"><img src="./img/dyson.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">다이슨</p></div></li>'
         }
         if(selectedOption === '27평형'){
           brandList.innerHTML = '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'
@@ -463,7 +463,7 @@
         if(selectedOption === '30평형'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="다이슨"><div class="brandListWrap"><img src="./imgs/dyson.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">다이슨</p></div></li>'
+          '<li data-type="다이슨"><div class="brandListWrap"><img src="./img/dyson.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">다이슨</p></div></li>'
         }
         if(selectedOption === '32평형'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'
@@ -472,64 +472,64 @@
 
         // 제습기
         if(selectedOption === '3down'){
-          brandList.innerHTML = '<li data-type="xiaomi"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'+
-          '<li data-type="winix"><div class="brandListWrap"><img src="./imgs/winix.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위닉스</p></div></li>'
+          brandList.innerHTML = '<li data-type="xiaomi"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'+
+          '<li data-type="winix"><div class="brandListWrap"><img src="./img/winix.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위닉스</p></div></li>'
         }
         if(selectedOption === '4L'){
           brandList.innerHTML = '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="캐리어"><div class="brandListWrap"><img src="./imgs/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
-          '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
+          '<li data-type="캐리어"><div class="brandListWrap"><img src="./img/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
+          '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
         }
         if(selectedOption === '5L'){
           brandList.innerHTML = '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'
         }
         if(selectedOption === '6L'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
-          '<li data-type="위닉스"><div class="brandListWrap"><img src="./imgs/winix.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위닉스</p></div></li>'
+          '<li data-type="위닉스"><div class="brandListWrap"><img src="./img/winix.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위닉스</p></div></li>'
         }
         if(selectedOption === '7L'){
-          brandList.innerHTML = '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
+          brandList.innerHTML = '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
         }
         if(selectedOption === 'dehumidall'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="캐리어"><div class="brandListWrap"><img src="./imgs/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
-          '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'+
-          '<li data-type="위닉스"><div class="brandListWrap"><img src="./imgs/winix.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위닉스</p></div></li>'
+          '<li data-type="캐리어"><div class="brandListWrap"><img src="./img/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
+          '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'+
+          '<li data-type="위닉스"><div class="brandListWrap"><img src="./img/winix.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위닉스</p></div></li>'
         }
         // 제습기
 
         // 가습기
         if(selectedOption === '3down'){
           brandList.innerHTML = '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="듀플렉스"><div class="brandListWrap"><img src="./imgs/duplex.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">듀플렉스</p></div></li>'
+          '<li data-type="듀플렉스"><div class="brandListWrap"><img src="./img/duplex.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">듀플렉스</p></div></li>'
         }
         if(selectedOption === '4L'){
-          brandList.innerHTML = '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'+
-          '<li data-type="위닉스"><div class="brandListWrap"><img src="./imgs/winix.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위닉스</p></div></li>'+
-          '<li data-type="듀플렉스"><div class="brandListWrap"><img src="./imgs/duplex.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">듀플렉스</p></div></li>'
+          brandList.innerHTML = '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'+
+          '<li data-type="위닉스"><div class="brandListWrap"><img src="./img/winix.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위닉스</p></div></li>'+
+          '<li data-type="듀플렉스"><div class="brandListWrap"><img src="./img/duplex.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">듀플렉스</p></div></li>'
         }
         if(selectedOption === '5L'){
-          brandList.innerHTML = '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
+          brandList.innerHTML = '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
         }
         if(selectedOption === '6L'){
-          brandList.innerHTML = '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
+          brandList.innerHTML = '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'
         }
         if(selectedOption === '7L'){
-          brandList.innerHTML = '<li data-type="위닉스"><div class="brandListWrap"><img src="./imgs/winix.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위닉스</p></div></li>'
+          brandList.innerHTML = '<li data-type="위닉스"><div class="brandListWrap"><img src="./img/winix.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위닉스</p></div></li>'
         }
         if(selectedOption === 'humidall'){
           brandList.innerHTML = '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="샤오미"><div class="brandListWrap"><img src="./imgs/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'+
-          '<li data-type="위닉스"><div class="brandListWrap"><img src="./imgs/winix.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위닉스</p></div></li>'+
-          '<li data-type="듀플렉스"><div class="brandListWrap"><img src="./imgs/duplex.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">듀플렉스</p></div></li>'
+          '<li data-type="샤오미"><div class="brandListWrap"><img src="./img/xiaomi.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">샤오미</p></div></li>'+
+          '<li data-type="위닉스"><div class="brandListWrap"><img src="./img/winix.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">위닉스</p></div></li>'+
+          '<li data-type="듀플렉스"><div class="brandListWrap"><img src="./img/duplex.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">듀플렉스</p></div></li>'
         }
         // 가습기
 
         // 오븐
         if(selectedOption === '20L'){
-          brandList.innerHTML = '<li data-type="캐리어"><div class="brandListWrap"><img src="./imgs/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
-          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./imgs/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'
+          brandList.innerHTML = '<li data-type="캐리어"><div class="brandListWrap"><img src="./img/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
+          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./img/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'
         }
         if(selectedOption === '21L'){
           brandList.innerHTML = ''
@@ -540,14 +540,14 @@
         if(selectedOption === '23L'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="캐리어"><div class="brandListWrap"><img src="./imgs/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
-          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./imgs/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'
+          '<li data-type="캐리어"><div class="brandListWrap"><img src="./img/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
+          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./img/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'
         }
         if(selectedOption === 'ovenall'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="캐리어"><div class="brandListWrap"><img src="./imgs/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
-          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./imgs/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'
+          '<li data-type="캐리어"><div class="brandListWrap"><img src="./img/carrier.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">캐리어</p></div></li>'+
+          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./img/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'
         }
         // 오븐
 
@@ -555,53 +555,49 @@
         if(selectedOption === '빌트인'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./imgs/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'+
-          '<li data-type="sk매직"><div class="brandListWrap"><img src="./imgs/sk.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">SK매직</p></div></li>'
+          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./img/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'+
+          '<li data-type="sk매직"><div class="brandListWrap"><img src="./img/sk.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">SK매직</p></div></li>'
         }
         if(selectedOption === '카운터탑'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./imgs/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'+
-          '<li data-type="sk매직"><div class="brandListWrap"><img src="./imgs/sk.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">SK매직</p></div></li>'
+          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./img/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'+
+          '<li data-type="sk매직"><div class="brandListWrap"><img src="./img/sk.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">SK매직</p></div></li>'
         }
         if(selectedOption === '프리스탠딩'){
-          brandList.innerHTML = '<li data-type="sk매직"><div class="brandListWrap"><img src="./imgs/sk.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">SK매직</p></div></li>'
+          brandList.innerHTML = '<li data-type="sk매직"><div class="brandListWrap"><img src="./img/sk.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">SK매직</p></div></li>'
         }
         if(selectedOption === 'dishwasherall'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./imgs/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'+
-          '<li data-type="sk매직"><div class="brandListWrap"><img src="./imgs/sk.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">SK매직</p></div></li>'
+          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./img/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'+
+          '<li data-type="sk매직"><div class="brandListWrap"><img src="./img/sk.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">SK매직</p></div></li>'
         }
         // 식기세척기
 
         // 정수기
         if(selectedOption === '데스크'){
           brandList.innerHTML = '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./imgs/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'+
-          '<li data-type="sk매직"><div class="brandListWrap"><img src="./imgs/sk.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">SK매직</p></div></li>'+
-          '<li data-type="피코그램"><div class="brandListWrap"><img src="./imgs/picogram.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">피코그램</p></div></li>'
+          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./img/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'+
+          '<li data-type="sk매직"><div class="brandListWrap"><img src="./img/sk.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">SK매직</p></div></li>'+
+          '<li data-type="피코그램"><div class="brandListWrap"><img src="./img/picogram.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">피코그램</p></div></li>'
         }
         if(selectedOption === '언더싱크'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./imgs/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'
+          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./img/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'
         }
         if(selectedOption === 'waterall'){
           brandList.innerHTML = '<li data-type="SAMSUNG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1207.svg" alt=""><p class="brandListName">삼성</p></div></li>'+
           '<li data-type="LG"><div class="brandListWrap"><img src="https://d11o63lgw0n6wa.cloudfront.net/images/logo/icon_manufacturer_1208.svg" alt=""><p class="brandListName">LG</p></div></li>'+
-          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./imgs/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'+
-          '<li data-type="sk매직"><div class="brandListWrap"><img src="./imgs/sk.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">SK매직</p></div></li>'+
-          '<li data-type="피코그램"><div class="brandListWrap"><img src="./imgs/picogram.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">피코그램</p></div></li>'
+          '<li data-type="쿠쿠"><div class="brandListWrap"><img src="./img/cuckoo.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">쿠쿠</p></div></li>'+
+          '<li data-type="sk매직"><div class="brandListWrap"><img src="./img/sk.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">SK매직</p></div></li>'+
+          '<li data-type="피코그램"><div class="brandListWrap"><img src="./img/picogram.png" alt="" style="width: 105px; height: 51px;"><p class="brandListName">피코그램</p></div></li>'
         }
         //정수기
 
       }
     });
-
-
-    // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@색깔 적용 구현하자
-
 
 brandList.addEventListener('click', function(event) {
       const clickedBrand = event.target.closest('li');

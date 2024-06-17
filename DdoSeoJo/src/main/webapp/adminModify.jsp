@@ -13,7 +13,7 @@
     PreparedStatement pstmt = null;
     ResultSet rs = null;
 
-    String url = "jdbc:mysql://localhost:3306/capstone";
+    String url = "jdbc:mysql://localhost:3306/DdoSseoJo";;
     String dbUserName = "root";
     String dbPassword = "dltmdghks0126";
 
