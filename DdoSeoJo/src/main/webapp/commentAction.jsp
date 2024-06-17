@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>댓글 작성</title>
 </head>
 <body>
@@ -36,7 +36,7 @@
 	            Class.forName("com.mysql.jdbc.Driver");
 	            conn = DriverManager.getConnection(url, dbUser, password);
 	
-	            String sql = "INSERT INTO comment VALUES (null, ?, 1, ?, ?, NOW(), NOW())";
+	            String sql = "INSERT INTO comment (content, level, userID, bbsID, createTime, updateTime, saleApproved) VALUES (?, 1, ?, ?, NOW(), NOW(), FALSE)";
 	            pstmt = conn.prepareStatement(sql);
 	            pstmt.setString(1, content);
 	            pstmt.setInt(2, userID);

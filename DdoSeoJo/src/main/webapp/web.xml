@@ -13,7 +13,18 @@
         <servlet-name>JoinServlet</servlet-name>
         <url-pattern>/JoinServlet</url-pattern>
     </servlet-mapping>
+    
+	<!-- URL 매핑 설정 -->
+    <servlet>
+	    <servlet-name>SaleStatusUpdateServlet</servlet-name>
+	    <servlet-class>controller.SaleStatusUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>SaleStatusUpdateServlet</servlet-name>
+	    <url-pattern>/updateSaleStatus</url-pattern>
+	</servlet-mapping>
+    
 
-    <!-- 기타 설정 등 -->
+   
 
 </web-app>

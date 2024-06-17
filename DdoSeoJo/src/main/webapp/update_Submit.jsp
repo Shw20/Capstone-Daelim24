@@ -19,6 +19,7 @@
             String user = "root";
             String password = "abcd1234";
             Class.forName("com.mysql.jdbc.Driver");
+
             conn = DriverManager.getConnection(url, user, password);
 
             // 게시물 ID 및 수정할 내용 가져오기

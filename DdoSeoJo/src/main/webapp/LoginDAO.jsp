@@ -36,6 +36,7 @@
 	            session.setAttribute("UserID", rs.getString("UserID"));
 	            session.setAttribute("Name", rs.getString("Name"));
 	            session.setAttribute("Email", rs.getString("Email"));
+	            session.setAttribute("PH", rs.getString("PH"));
 
 	            
                 // 메인 페이지에 세션부여
@@ -86,5 +87,4 @@
             e.printStackTrace();
         }
     }
-
 %>

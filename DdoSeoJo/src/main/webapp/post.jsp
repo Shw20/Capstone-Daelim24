@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
+<%@ page import="javax.naming.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +9,29 @@
 <link rel="stylesheet" href="resources/css/footerStyle.css">
 <link rel="stylesheet" href="resources/css/Post.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function startSaleToUser(commentID) {
+        	// 판매 시작 메시지 표시
+            alert("이 사용자에게 판매를 시작했습니다.");
+
+            // AJAX를 사용하여 서버로 판매 승인 상태를 업데이트하는 요청 보내기
+            $.ajax({
+                type: "POST",
+                url: "updateSaleStatus",
+                data: { commentID: commentID },
+                success: function(response) {
+                    alert(response);
+                    location.reload();
+                },
+                error: function(xhr, status, error) {
+                    console.error(xhr.responseText);
+                }
+            });
+        }
+    </script>
+
+
 
 <%
     Connection conn = null;
@@ -18,7 +42,7 @@
         String url = "jdbc:mysql://localhost:3306/capstone";
         String user = "root";
         String password = "abcd1234";
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.cj.jdbc.Driver");
         conn = DriverManager.getConnection(url, user, password);
     } catch (Exception e) {
         e.printStackTrace();
@@ -26,9 +50,10 @@
 %>
 
 </head>
+<body style="margin-top: 200px;">
 <header>
     <%
-        request.setCharacterEncoding("UTF8");
+        request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
         Integer IDX = (Integer) session.getAttribute("IDX");
@@ -45,7 +70,6 @@
             <% }
         } %>
 </header>
-<body style="margin-top: 200px;">
 <main>
     <%
         int bbsID = 0;
@@ -54,24 +78,44 @@
             bbsID = Integer.parseInt(request.getParameter("bbsID"));
             session.setAttribute("bbsID", bbsID); // 세션에 bbsID 저장
 
-            // SQL 쿼리 실행
-            String sql = "SELECT b.*, u.userID " +
-                    	 "FROM bbs b " +
-                    	 "JOIN user u ON b.userID = u.IDX " +
-                    	 "WHERE b.bbsID = ?";
+         // SQL 쿼리 실행
+            String sql = "SELECT b.*, u.UserID " +
+                         "FROM bbs b " +
+                         "JOIN user u ON b.UserID = u.IDX " +
+                         "WHERE b.bbsID = ?";
             pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, bbsID);
             rs = pstmt.executeQuery();
 
             // 결과 출력
             if (rs.next()) {
-            	String postUserID = rs.getString("u.userID");
-                int postUserIDX = rs.getInt("b.userID");
+            	String postUserID = rs.getString("u.UserID");
+                int postUserIDX = rs.getInt("b.UserID");
+                String postStatus = rs.getString("b.status");
+
+                String productName = rs.getString("b.productName");  // 상품명
+                String brandName = rs.getString("b.brandName");      // 브랜드명
+                int price = rs.getInt("price");      // 브랜드명
+
+                
+             	// productName과 brandName을 세션에 저장
+                session.setAttribute("productName", productName);
+                session.setAttribute("brandName", brandName);
+                session.setAttribute("price", price);
+                session.setAttribute("postUserIDX", postUserIDX);
+                
+                
     %>
     <h1><%=rs.getString("b.title") %></h1>
-    
+    <%
+        
+	%>
+    <div>
+	    <p><strong>상품명:</strong> <%= productName %></p>
+	    <p><strong>브랜드명:</strong> <%= brandName %></p>
+	</div>
     <p style="text-align: right;">
-        <strong>작성자:</strong> <%= postUserID %> | <strong>작성일:</strong> <%= rs.getString("b.CreateTime") %>
+        <strong>작성자:</strong> <%= postUserID %> | <strong>작성일:</strong> <%= rs.getString("b.CreateTime") %> | <strong>판매상태:</strong> <%= rs.getString("b.Status") %>
     </p>
     <div class="post-content" style="display: flex; justify-content: space-between;">
         <p style="margin-right: 20px;"><%= rs.getString("b.content") %></p>
@@ -88,18 +132,40 @@
             <%
                 // 세션에 있는 사용자 ID와 게시물을 작성한 사용자 ID 비교
                 if (IDX != null && IDX == postUserIDX) {
+                	if("판매중".equals(postStatus)){
             %>
-            <!-- 수정 버튼 -->
-            <form method="post" action="update_post.jsp">
-                <input type="hidden" name="bbsID" value="<%= bbsID %>">
-                <input type="submit" value="수정">
-            </form>
-            <!-- 삭제 버튼 -->
-            <form method="post" action="delete_post.jsp">
-                <input type="hidden" name="bbsID" value="<%= bbsID %>">
-                <input type="submit" value="삭제" class="delete">        
-            </form>
+	            <!-- 판매 상태 수정 버튼 -->
+	            <form method="post" action="status_update.jsp">
+	            	<input type="hidden" name="bbsID" value="<%= bbsID %>">
+	            	<input type="submit" value="판매완료" class="Status">
+	            </form>
+	            <!-- 수정 버튼 -->
+	            <form method="post" action="update_post.jsp">
+	                <input type="hidden" name="bbsID" value="<%= bbsID %>">
+	                <input type="submit" value="수정">
+	            </form>
+	            <!-- 삭제 버튼 -->
+	            <form method="post" action="delete_post.jsp">
+	                <input type="hidden" name="bbsID" value="<%= bbsID %>">
+	                <input type="submit" value="삭제" class="delete">        
+	            </form>
+	        <%
+            
+                	} else{
+            %>
+                <!-- 수정 버튼 -->
+	            <form method="post" action="update_post.jsp">
+	                <input type="hidden" name="bbsID" value="<%= bbsID %>">
+	                <input type="submit" value="수정">
+	            </form>
+	            <!-- 삭제 버튼 -->
+	            <form method="post" action="delete_post.jsp">
+	                <input type="hidden" name="bbsID" value="<%= bbsID %>">
+	                <input type="submit" value="삭제" class="delete">        
+	            </form>
+            
             <%
+                	}
                 }
             %>
         </div>
@@ -157,8 +223,8 @@
 		        // 데이터베이스 연결
 		        String url = "jdbc:mysql://localhost:3306/capstone";
 		        String user = "root";
-		        String password = "dltmdghks0126";
-		        Class.forName("com.mysql.cj.jdbc.Driver");
+		        String password = "abcd1234";
+		        Class.forName("com.mysql.jdbc.Driver");
 		        conn2 = DriverManager.getConnection(url, user, password);
 		
 		        // 전체 댓글 개수 조회
@@ -169,6 +235,7 @@
 		        int totalComments = 0;
 		        if (rs2.next()) {
 		            totalComments = rs2.getInt("total");
+		            
 		        }
 		
 		        // 페이지당 댓글 개수
@@ -179,14 +246,15 @@
 		
 		        // 현재 페이지 파라미터 가져오기
 		        int currentPage = request.getParameter("page") != null ? Integer.parseInt(request.getParameter("page")) : 1;
+		        
 		
 		        // SQL 쿼리 실행
 		        String sql2 = "SELECT c.*, u.userID " +
-		                "FROM comment c " +
-		                "JOIN user u ON c.userID = u.IDX " +
-		                "WHERE c.bbsID = ? " +
-		                "ORDER BY c.CreateTime ASC " +
-		                "LIMIT ?, ?";
+		           	   	      "FROM comment c " +
+		                	  "JOIN user u ON c.userID = u.IDX " +
+		                	  "WHERE c.bbsID = ? " +
+		                	  "ORDER BY c.CreateTime ASC " +
+		                	  "LIMIT ?, ?";
 		        pstmt2 = conn2.prepareStatement(sql2);
 		        pstmt2.setInt(1, bbsID);
 		        pstmt2.setInt(2, (currentPage - 1) * commentsPerPage);
@@ -195,6 +263,7 @@
 		
 		        // 결과 출력
 		        if (rs2.next()) {
+		        	
 		%>
 		<%
 		    // 페이지 링크 생성
@@ -206,7 +275,10 @@
 		    <h2>댓글</h2>
 		    <%
 		        do {
+		        	int commentID = rs2.getInt("commentID");
 		            int commentUserID = rs2.getInt("userID");
+		            boolean saleApproved = rs2.getBoolean("saleApproved");
+		            
 		    %>
 		    <%
 		        // 댓글 작성자와 세션의 사용자 ID 비교
@@ -219,8 +291,33 @@
 		        <a href="delete_comment.jsp?commentID=<%= rs2.getInt("commentID") %>" class="delete">삭제</a>
 		    </div>
 		    <%
-		        }
+		        } else if (IDX != null && IDX != (Integer) session.getAttribute("postUserIDX")) {
 		    %>
+		    <div style="display: flex; justify-content: flex-end;">
+			    <!-- 작성자가 아닌 댓글을 단 사람에게 판매하기 버튼 -->
+			    <button onclick="startSaleToUser(<%= commentID %>)" class="sell">이 사람에게 판매하기</button>
+			</div>		    
+		    <% } %>
+		    
+			<%
+			    Integer postUserIDX = (Integer) session.getAttribute("postUserIDX"); // 게시글 작성자의 IDX 가져오기
+			    
+	    
+			%>
+			<% if (IDX != null && saleApproved && IDX == commentUserID) { 
+			    // 세션에서 상품 이름과 브랜드명 가져오기
+			    String productName = (String) session.getAttribute("productName");
+			    String brandName = (String) session.getAttribute("brandName");
+			    int price = (int) session.getAttribute("price");
+
+			%>
+	            <div style="display: flex; justify-content: flex-end;">
+<%-- 	                <button class="order" onclick="window.location.href='order.jsp?buyer=<%= IDX %>&seller=<%= postUserIDX %>&product=<%= bbsID %>'">주문하기</button> --%>
+					<button class="order" onclick="window.location.href='order.jsp?buyer=<%= IDX %>&seller=<%= postUserIDX %>&bbsID=<%= bbsID %>&productName=<%= productName %>&brandName=<%= brandName %>&commentID=<%= commentID %>&price=<%= price %>'">주문하기</button>
+	            </div>
+	        <% } %>
+
+		    
 		    <div class="comment">
 		        <div style="display: flex; justify-content: space-between;">
 		            <p><strong> <%= rs2.getString("u.userID") %></strong></p>

@@ -125,3 +125,12 @@ h1 {
 .buttons input[type="submit"].delete:hover {
     background-color: #c82333;
 }
+
+.buttons input[type="submit"].Status{
+	background-color: #ffd400;
+}
+
+.buttons input[type="submit"].Status:hover{
+	background-color: #f7b008;
+}
+

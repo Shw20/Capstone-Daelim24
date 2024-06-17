@@ -50,22 +50,79 @@
             String fileName = multi.getFilesystemName("fileName");
             String title = multi.getParameter("title");
             String content = multi.getParameter("content");
+            String TypeName = multi.getParameter("category1");
+            String SecondType = multi.getParameter("category2");
+            String ThirdType = multi.getParameter("category3");
+            String BrandName = multi.getParameter("brand");
+            String productName = multi.getParameter("productName");
+            String priceStr = multi.getParameter("price");
+            int price = Integer.parseInt(priceStr);
+            
+         	// productName과 postUserIDX를 세션에 저장
+            session.setAttribute("productName", productName);
+            session.setAttribute("BrandName", BrandName);
+            session.setAttribute("postUserIDX", IDX);
 
             out.println("<p>파일 이름: " + fileName + "</p>");
             out.println("<p>제목: " + title + "</p>");
             out.println("<p>내용: " + content + "</p>");
+            
+            int PrdID = -1; // product ID 초기화
+            
+            if(TypeName != null && SecondType != null && BrandName != null && productName != null && priceStr != null){
+            	Class.forName("com.mysql.cj.jdbc.Driver");
+            	
+            	try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/capstone", "root", "abcd1234")) {
+                    // product 테이블에 제품 추가
+            		String sql = "INSERT INTO product VALUES (null, ?, ?, ?, ?, ?, ?, ?)";
+                    try (PreparedStatement pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)){
+                        pstmt.setString(1, productName);
+                        pstmt.setInt(2, price);
+                        pstmt.setString(3, TypeName);
+                        pstmt.setString(4, BrandName);
+                        pstmt.setString(5, SecondType);
+                        pstmt.setString(6, ThirdType);
+                        pstmt.setString(7, fileName);
+                        
+                        int rowsAffected = pstmt.executeUpdate();
+                        if (rowsAffected > 0) {
+                            ResultSet generatedKeys = pstmt.getGeneratedKeys();
+                            if (generatedKeys.next()) {
+                                PrdID = generatedKeys.getInt(1); // 새로 생성된 product ID 가져오기
+                            } else {
+                                message = "1데이터 추가에 실패했습니다.";
+                            }
+                        }
+                        
+                    }catch (SQLException e) {
+                        message = "1데이터베이스 연결 또는 쿼리 실행 중 오류가 발생했습니다.";
+                        log("DB연결 오류: " + e.getMessage());
+                    }
+            	}catch (SQLException e) {
+                    message = "2데이터베이스 연결 또는 쿼리 실행 중 오류가 발생했습니다.";
+                    log("DB연결 오류: " + e.getMessage());
+                }
+            }
 
             if (title != null && content != null && fileName != null) {
-                Class.forName("com.mysql.jdbc.Driver");
+                Class.forName("com.mysql.cj.jdbc.Driver");
                 
                 try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/capstone", "root", "abcd1234")) {
-                    // SQL 쿼리 실행
-                    String sql = "INSERT INTO bbs VALUES (null, 1, ?, ?, ?, '판매중', NOW(), NOW(), ?)";
+                    // bbs 테이블에 데이터 추가
+//                     String sql = "INSERT INTO bbs VALUES (null, ?, ?, ?, ?, '판매중', NOW(), NOW(), ?, ?, ?)";
+//                     String sql = "INSERT INTO bbs VALUES (null, ?, ?, ?, ?, '판매중', NOW(), NOW(), ?, ?,?,?)";
+                    String sql = "INSERT INTO bbs VALUES (null,?, ?, ?, ?,'판매중', NOW(), NOW(), ?, ?, ?, ?)";
+
                     try (PreparedStatement pstmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
-                        pstmt.setInt(1, IDX);
-                        pstmt.setString(2, title);
-                        pstmt.setString(3, content);
-                        pstmt.setString(4, fileName);
+                                                
+                        pstmt.setInt(1, PrdID); // 새로 생성된 product ID 사용
+                        pstmt.setInt(2, IDX);
+                        pstmt.setString(3, title);
+                        pstmt.setString(4, content);
+                        pstmt.setString(5, fileName);
+                        pstmt.setString(6, productName);
+                        pstmt.setString(7, BrandName);
+                        pstmt.setInt(8, price);
                         
                         int rowsAffected = pstmt.executeUpdate();
                         if (rowsAffected > 0) {
@@ -87,7 +144,7 @@
                                             // HTML 코드 시작
                                             %>
                                             <script>
-                                                alert('데이터가 성공적으로 추가되었습니다.');
+                                                alert('판매 완료시 꼭 판매완료 버튼을 눌러주세요.');
                                                 location.href= "post.jsp?bbsID=<%= bbsID %>"
                                             </script>
                                             <%
@@ -98,14 +155,14 @@
                                     }
                                 }
                             } else {
-                                message = "데이터 추가에 실패했습니다.";
+                                message = "2데이터 추가에 실패했습니다.";
                             }
                         } else {
                             message = "데이터베이스에 데이터를 추가하지 못했습니다.";
                         }
                     }
                 } catch (SQLException e) {
-                    message = "데이터베이스 연결 또는 쿼리 실행 중 오류가 발생했습니다.";
+                    message = "3데이터베이스 연결 또는 쿼리 실행 중 오류가 발생했습니다.";
                     log("DB연결 오류: " + e.getMessage());
                 }
             } else {
@@ -120,3 +177,4 @@
     %>
 </body>
 </html>
+

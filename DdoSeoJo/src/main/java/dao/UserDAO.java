@@ -10,7 +10,7 @@ public class UserDAO {
 
     public UserDAO() {
         try {
-        	Class.forName("com.mysql.jdbc.Driver");
+        	Class.forName("com.mysql.cj.jdbc.Driver");
             String url = "jdbc:mysql://localhost:3306/capstone?&useSSL=false";
             String username = "root";
             String password = "abcd1234";
