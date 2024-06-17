@@ -91,12 +91,8 @@
             <% 
                 // 이미지 표시
                 int bbsID = rs.getInt("bbsID");
-<<<<<<< HEAD
                 String imagePath = "resorces/img/" + bbsID + "사진.jpg"; // 새로운 이미지 경로 생성
-=======
            		int wishlistBbsID = rs.getInt("wishlistBbsID");
-                String imagePath = "image/" + bbsID + "사진.jpg"; // 새로운 이미지 경로 생성
->>>>>>> refs/remotes/origin/post
             %>
             <div class="gallery-item">
                 <div class="image-container">
